@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Free Syrians — a bilingual English and Arabic website.">
   <title>Free Syrians</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Free Syrians</h1>
-  <p>New FreeSyrians.ca website is being built.</p>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Free Syrians home">FREE SYRIANS</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
+        <a href="#english">English</a>
+        <a href="#arabic">العربية</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">FreeSyrians.ca</p>
+        <h1>Free Syrians</h1>
+        <p class="hero-text">
+          The new FreeSyrians.ca website is being built here.
+        </p>
+
+        <div class="language-options" aria-label="Choose a language">
+          <a class="language-card" href="#english">
+            <span class="language-name">English</span>
+            <span class="language-note">Continue in English</span>
+          </a>
+
+          <a class="language-card" href="#arabic" lang="ar" dir="rtl">
+            <span class="language-name">العربية</span>
+            <span class="language-note">المتابعة باللغة العربية</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="english" class="content-section">
+      <div class="container">
+        <h2>English</h2>
+        <p>English content will be added as we rebuild the website.</p>
+      </div>
+    </section>
+
+    <section id="arabic" class="content-section" lang="ar" dir="rtl">
+      <div class="container">
+        <h2>العربية</h2>
+        <p>سيتم إضافة المحتوى العربي أثناء إعادة بناء الموقع.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>FreeSyrians.ca</p>
+    </div>
+  </footer>
 </body>
 </html>

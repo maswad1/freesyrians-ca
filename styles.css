@@ -135,29 +135,12 @@ a {
   position: absolute;
   inset: 0;
   z-index: -3;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  transform: scale(1.04);
-}
-
-.flag-band {
-  width: 100%;
-}
-
-.flag-green {
-  background: linear-gradient(120deg, #0d5b39, #1c8b59);
-}
-
-.flag-white {
-  background:
-    radial-gradient(circle at 42% 50%, rgba(199, 53, 53, 0.95) 0 12px, transparent 13px),
-    radial-gradient(circle at 50% 50%, rgba(199, 53, 53, 0.95) 0 12px, transparent 13px),
-    radial-gradient(circle at 58% 50%, rgba(199, 53, 53, 0.95) 0 12px, transparent 13px),
-    linear-gradient(120deg, #f8f8f4, #dfe8e2);
-}
-
-.flag-black {
-  background: linear-gradient(120deg, #151a18, #020403);
+  background-color: var(--deep-green);
+  background-image: url("assets/images/hero-eagle-flag.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 46%;
+  transform: scale(1.015);
 }
 
 .hero::before {
@@ -166,8 +149,8 @@ a {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 72% 28%, rgba(255, 255, 255, 0.20), transparent 26%),
-    linear-gradient(90deg, rgba(5, 18, 13, 0.88) 0%, rgba(5, 18, 13, 0.70) 43%, rgba(5, 18, 13, 0.38) 70%, rgba(5, 18, 13, 0.64) 100%);
+    radial-gradient(circle at 72% 28%, rgba(255, 255, 255, 0.10), transparent 28%),
+    linear-gradient(90deg, rgba(5, 18, 13, 0.90) 0%, rgba(5, 18, 13, 0.74) 38%, rgba(5, 18, 13, 0.36) 68%, rgba(5, 18, 13, 0.46) 100%);
 }
 
 .hero-overlay {
@@ -175,8 +158,8 @@ a {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(to bottom, transparent 60%, rgba(8, 26, 19, 0.76)),
-    repeating-linear-gradient(135deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 12px);
+    linear-gradient(to bottom, rgba(5, 18, 13, 0.08) 45%, rgba(8, 26, 19, 0.76)),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 12px);
 }
 
 .hero-inner {
@@ -450,6 +433,10 @@ a {
     min-height: 680px;
   }
 
+  .hero-backdrop {
+    background-position: center 45%;
+  }
+
   .intro-grid {
     grid-template-columns: 1fr;
     gap: 44px;
@@ -495,6 +482,14 @@ a {
 
   .hero {
     min-height: auto;
+  }
+
+  .hero-backdrop {
+    background-position: center 44%;
+  }
+
+  .hero::before {
+    background: linear-gradient(180deg, rgba(5, 18, 13, 0.66) 0%, rgba(5, 18, 13, 0.56) 45%, rgba(5, 18, 13, 0.78) 100%);
   }
 
   .hero-inner {

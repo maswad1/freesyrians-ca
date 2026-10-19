@@ -3,63 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free Syrians — a bilingual English and Arabic website.">
-  <title>Free Syrians</title>
+  <meta name="description" content="Free Syrians — a bilingual English and Arabic website for Syrians around the world.">
+  <meta name="theme-color" content="#0f2d22">
+  <title>Free Syrians | سوريون أحرار</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="#top" aria-label="Free Syrians home">FREE SYRIANS</a>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Free Syrians home">
+        <span class="brand-mark" aria-hidden="true">FS</span>
+        <span class="brand-copy">
+          <strong>FREE SYRIANS</strong>
+          <small lang="ar" dir="rtl">سوريون أحرار</small>
+        </span>
+      </a>
 
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#top">Home</a>
         <a href="#english">English</a>
-        <a href="#arabic">العربية</a>
+        <a href="#arabic" lang="ar" dir="rtl">العربية</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-backdrop" aria-hidden="true">
+        <div class="flag-band flag-green"></div>
+        <div class="flag-band flag-white"></div>
+        <div class="flag-band flag-black"></div>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-inner">
         <p class="eyebrow">FreeSyrians.ca</p>
-        <h1>Free Syrians</h1>
-        <p class="hero-text">
-          The new FreeSyrians.ca website is being built here.
-        </p>
+        <h1 id="hero-title">FREE SYRIANS</h1>
+        <p class="hero-arabic" lang="ar" dir="rtl">سوريون أحرار</p>
+        <p class="hero-text">Choose your language to enter the site.</p>
 
         <div class="language-options" aria-label="Choose a language">
           <a class="language-card" href="#english">
+            <span class="language-kicker">Welcome</span>
             <span class="language-name">English</span>
             <span class="language-note">Continue in English</span>
+            <span class="language-arrow" aria-hidden="true">→</span>
           </a>
 
-          <a class="language-card" href="#arabic" lang="ar" dir="rtl">
+          <a class="language-card language-card-ar" href="#arabic" lang="ar" dir="rtl">
+            <span class="language-kicker">أهلاً بكم</span>
             <span class="language-name">العربية</span>
             <span class="language-note">المتابعة باللغة العربية</span>
+            <span class="language-arrow" aria-hidden="true">←</span>
           </a>
+        </div>
+      </div>
+
+      <div class="hero-caption">
+        <span>Free Syrians</span>
+        <span class="caption-dot" aria-hidden="true"></span>
+        <span lang="ar" dir="rtl">سوريون أحرار</span>
+      </div>
+    </section>
+
+    <section class="intro-section" aria-label="Free Syrians introduction">
+      <div class="section-shell intro-grid">
+        <div class="intro-copy">
+          <p class="section-label">FREE SYRIANS</p>
+          <h2>A clear, modern home for our bilingual website.</h2>
+          <p>This new site keeps the strong Syrian identity of FreeSyrians.ca while making the experience faster, cleaner, easier to read, and fully responsive on phones, tablets, and computers.</p>
+        </div>
+
+        <div class="principles" aria-label="Site priorities">
+          <article>
+            <span>01</span>
+            <h3>Bilingual</h3>
+            <p>English and Arabic are treated as equal first-class experiences.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Simple</h3>
+            <p>Visitors immediately understand where to go without unnecessary clutter.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Fast</h3>
+            <p>A lightweight static site loads quickly without WordPress overhead.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="english" class="content-section">
-      <div class="container">
-        <h2>English</h2>
-        <p>English content will be added as we rebuild the website.</p>
+    <section id="english" class="language-section english-section">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">ENGLISH</p>
+          <h2>English</h2>
+          <p>The English content from the existing FreeSyrians.ca website will be rebuilt here in a cleaner, modern format.</p>
+        </div>
+        <a class="section-button" href="#top">Back to top</a>
       </div>
     </section>
 
-    <section id="arabic" class="content-section" lang="ar" dir="rtl">
-      <div class="container">
-        <h2>العربية</h2>
-        <p>سيتم إضافة المحتوى العربي أثناء إعادة بناء الموقع.</p>
+    <section id="arabic" class="language-section arabic-section" lang="ar" dir="rtl">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">العربية</p>
+          <h2>الموقع العربي</h2>
+          <p>سيتم إعادة بناء المحتوى العربي الموجود في موقع FreeSyrians.ca بتصميم حديث وواضح وسهل الاستخدام.</p>
+        </div>
+        <a class="section-button" href="#top">العودة إلى الأعلى</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="section-shell footer-inner">
+      <div>
+        <strong>FREE SYRIANS</strong>
+        <span lang="ar" dir="rtl">سوريون أحرار</span>
+      </div>
       <p>FreeSyrians.ca</p>
     </div>
   </footer>

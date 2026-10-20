@@ -234,7 +234,7 @@ a { color: inherit; }
   }
 
   .hero-title {
-    top: 45%;
+    top: 42%;
     width: 92%;
     font-size: clamp(1.3rem, 5.8vw, 1.9rem);
     letter-spacing: 0.05em;
@@ -248,7 +248,7 @@ a { color: inherit; }
 
 @media (max-width: 430px) {
   .hero-title {
-    top: 45%;
+    top: 42%;
     font-size: clamp(1.15rem, 5.2vw, 1.6rem);
     letter-spacing: 0.045em;
   }

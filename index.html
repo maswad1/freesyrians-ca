@@ -6,7 +6,7 @@
   <meta name="description" content="Free Syrians — a bilingual English and Arabic website for Syrians around the world.">
   <meta name="theme-color" content="#0f2d22">
   <title>Free Syrians | أحرار سوريا</title>
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <header class="site-header">
@@ -29,43 +29,33 @@
 
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-backdrop" aria-hidden="true">
-        <svg class="hero-art" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <image href="assets/images/hero-eagle-flag-1.webp?v=5" x="0" y="0" width="300" height="720" preserveAspectRatio="none" />
-          <image href="assets/images/hero-eagle-flag-2.webp?v=5" x="300" y="0" width="300" height="720" preserveAspectRatio="none" />
-          <image href="assets/images/hero-eagle-flag-3.webp?v=5" x="600" y="0" width="300" height="720" preserveAspectRatio="none" />
-          <image href="assets/images/hero-eagle-flag-4.webp?v=5" x="900" y="0" width="300" height="720" preserveAspectRatio="none" />
-        </svg>
-      </div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">FreeSyrians.ca</p>
+          <h1 id="hero-title">FREE SYRIANS</h1>
+          <p class="hero-arabic" lang="ar" dir="rtl">أحرار سوريا</p>
+          <p class="hero-text">Choose your language to enter the site.</p>
 
-      <div class="hero-inner">
-        <p class="eyebrow">FreeSyrians.ca</p>
-        <h1 id="hero-title">FREE SYRIANS</h1>
-        <p class="hero-arabic" lang="ar" dir="rtl">أحرار سوريا</p>
-        <p class="hero-text">Choose your language to enter the site.</p>
+          <div class="language-options" aria-label="Choose a language">
+            <a class="language-card" href="#english">
+              <span class="language-kicker">Welcome</span>
+              <span class="language-name">English</span>
+              <span class="language-note">Continue in English</span>
+              <span class="language-arrow" aria-hidden="true">→</span>
+            </a>
 
-        <div class="language-options" aria-label="Choose a language">
-          <a class="language-card" href="#english">
-            <span class="language-kicker">Welcome</span>
-            <span class="language-name">English</span>
-            <span class="language-note">Continue in English</span>
-            <span class="language-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="language-card language-card-ar" href="#arabic" lang="ar" dir="rtl">
-            <span class="language-kicker">أهلاً بكم</span>
-            <span class="language-name">العربية</span>
-            <span class="language-note">المتابعة باللغة العربية</span>
-            <span class="language-arrow" aria-hidden="true">←</span>
-          </a>
+            <a class="language-card language-card-ar" href="#arabic" lang="ar" dir="rtl">
+              <span class="language-kicker">أهلاً بكم</span>
+              <span class="language-name">العربية</span>
+              <span class="language-note">المتابعة باللغة العربية</span>
+              <span class="language-arrow" aria-hidden="true">←</span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="hero-caption">
-        <span>Free Syrians</span>
-        <span class="caption-dot" aria-hidden="true"></span>
-        <span lang="ar" dir="rtl">أحرار سوريا</span>
+        <div class="hero-visual">
+          <img src="assets/images/hero-eagle-full.webp?v=6" alt="Syrian eagle with the Syrian flag" width="900" height="1207">
+        </div>
       </div>
     </section>
 

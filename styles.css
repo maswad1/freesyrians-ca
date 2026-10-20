@@ -200,6 +200,18 @@ a { color: inherit; }
 
   .hero {
     min-height: calc(100vh - 70px);
+    background: var(--green);
+  }
+
+  .hero-art {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    transform: translateY(-50%);
   }
 
   .intro-section,

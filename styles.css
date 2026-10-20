@@ -236,8 +236,8 @@ a { color: inherit; }
   .hero-title {
     top: 45%;
     width: 92%;
-    font-size: clamp(1.8rem, 9vw, 3.1rem);
-    letter-spacing: 0.09em;
+    font-size: clamp(1.55rem, 7vw, 2.4rem);
+    letter-spacing: 0.065em;
   }
 
   .intro-section,
@@ -249,7 +249,8 @@ a { color: inherit; }
 @media (max-width: 430px) {
   .hero-title {
     top: 45%;
-    font-size: clamp(1.55rem, 8.5vw, 2.45rem);
+    font-size: clamp(1.35rem, 6.4vw, 1.85rem);
+    letter-spacing: 0.055em;
   }
 }
 

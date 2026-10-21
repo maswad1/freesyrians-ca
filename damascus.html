@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0f2d22">
   <title>Damascus | Free Syrians</title>
   <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="mobile-nav.css?v=2">
   <style>
     .city-page {
       min-height: calc(100vh - 78px);
@@ -107,6 +108,32 @@
           <small lang="ar" dir="rtl">أحرار سوريا</small>
         </span>
       </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu">
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-actions" id="mobile-navigation">
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#mission">Our Mission</a>
+          <a href="index.html#syria" aria-current="page">Syria</a>
+          <a href="index.html#stories">Stories</a>
+          <a href="index.html#events">Events</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#resources">Resources</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="language-switch" aria-label="Language selection">
+          <a href="index.html#english" lang="en">EN</a>
+          <span class="language-divider" aria-hidden="true">|</span>
+          <a href="index.html#arabic" lang="ar" dir="rtl">العربية</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -165,5 +192,7 @@
       <p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p>
     </div>
   </footer>
+
+  <script src="mobile-nav.js?v=1" defer></script>
 </body>
 </html>

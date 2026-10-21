@@ -82,6 +82,7 @@ a { color: inherit; }
   font-size: 0.92rem;
   font-weight: 650;
   color: #35413c;
+  transition: color 180ms ease;
 }
 .main-nav a::after {
   content: "";
@@ -95,8 +96,15 @@ a { color: inherit; }
   background: var(--green);
   transition: transform 180ms ease;
 }
+.main-nav a:hover,
+.main-nav a:focus-visible { color: var(--deep-green); }
 .main-nav a:hover::after,
 .main-nav a:focus-visible::after { transform: scaleX(1); }
+.main-nav a[aria-current="page"] {
+  color: var(--deep-green);
+  font-weight: 750;
+}
+.main-nav a[aria-current="page"]::after { transform: scaleX(1); }
 
 .language-switch {
   display: inline-flex;

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Damascus — its history, Old City, Mount Qasioun, culture, and place in Syria.">
+  <meta name="theme-color" content="#0f2d22">
+  <title>Damascus | Free Syrians</title>
+  <link rel="stylesheet" href="styles.css?v=26">
+  <style>
+    .city-page {
+      min-height: calc(100vh - 78px);
+      padding: 86px 0 110px;
+      background: #f7f8f6;
+    }
+    .city-hero {
+      max-width: 900px;
+      margin-bottom: 46px;
+    }
+    .city-hero h1 {
+      margin: 0;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+    .city-hero .city-ar {
+      margin: 12px 0 0;
+      color: var(--green);
+      font-size: 1.35rem;
+      font-weight: 750;
+    }
+    .city-hero > p:last-child {
+      max-width: 760px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+    .city-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1000px;
+    }
+    .city-card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+    }
+    .city-card h2 {
+      margin: 0 0 12px;
+      font-size: 1.55rem;
+      letter-spacing: -0.025em;
+    }
+    .city-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .city-back {
+      display: inline-flex;
+      margin-top: 38px;
+      font-weight: 750;
+      color: var(--deep-green);
+      text-decoration: none;
+    }
+    @media (max-width: 760px) {
+      .city-page { padding: 54px 0 80px; }
+      .city-grid { grid-template-columns: 1fr; }
+      .city-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" aria-label="Free Syrians home">
+        <span class="brand-copy">
+          <strong>FREE SYRIANS</strong>
+          <small lang="ar" dir="rtl">أحرار سوريا</small>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main class="city-page">
+    <div class="section-shell">
+      <section class="city-hero" aria-labelledby="damascus-title">
+        <p class="section-label">EXPLORE SYRIA</p>
+        <h1 id="damascus-title">Damascus</h1>
+        <p class="city-ar" lang="ar" dir="rtl">دمشق</p>
+        <p>Damascus is Syria’s capital and one of the great historic cities of the region. Its identity has been shaped by ancient trade routes, faith, scholarship, craftsmanship, architecture, family life, and generations of people who made the city their home.</p>
+      </section>
+
+      <div class="city-grid">
+        <article class="city-card">
+          <h2>Old Damascus</h2>
+          <p>The historic heart of the city is known for its narrow lanes, traditional courtyard houses, markets, places of worship, and layers of architecture from many periods. Landmarks such as the Umayyad Mosque, Straight Street, and the old souqs reflect the city’s long and complex history.</p>
+        </article>
+
+        <article class="city-card">
+          <h2>Mount Qasioun</h2>
+          <p>Qasioun rises above Damascus and has long been part of the city’s visual identity. From its slopes, the city spreads across the plain below, making the mountain a familiar symbol of Damascus for residents, visitors, and Syrians abroad.</p>
+        </article>
+
+        <article class="city-card">
+          <h2>Living Heritage</h2>
+          <p>Damascus is not only a collection of monuments. Its culture lives through food, music, crafts, family traditions, neighborhoods, gardens, cafés, markets, and the everyday memories of the people who have lived there across generations.</p>
+        </article>
+
+        <article class="city-card">
+          <h2>Modern Damascus</h2>
+          <p>Beyond the Old City, Damascus is a modern capital made up of many districts and communities. Its contemporary story includes education, business, art, migration, social change, hardship, resilience, and the continuing relationship between Syrians and their capital.</p>
+        </article>
+      </div>
+
+      <a class="city-back" href="index.html#syria">← Back to Syria</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <div>
+        <strong>FREE SYRIANS</strong>
+        <span lang="ar" dir="rtl">أحرار سوريا</span>
+      </div>
+      <p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -23,7 +23,7 @@
     if (event.key === 'Escape') setOpen(false);
   });
 
-  const desktop = window.matchMedia('(min-width: 761px)');
+  const desktop = window.matchMedia('(min-width: 981px)');
   desktop.addEventListener('change', (event) => {
     if (event.matches) setOpen(false);
   });

@@ -40,10 +40,12 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 20px;
 }
 
 .brand {
+  flex: 0 0 auto;
+  min-height: 46px;
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -66,7 +68,13 @@ a { color: inherit; }
 .brand-copy strong { font-size: 0.93rem; letter-spacing: 0.13em; }
 .brand-copy small { margin-top: 4px; color: var(--muted); font-size: 0.78rem; }
 
-.nav-actions { display: flex; align-items: center; gap: 18px; }
+.nav-actions {
+  min-height: 46px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
 .main-nav { display: flex; align-items: center; gap: 24px; }
 .main-nav a {
   position: relative;
@@ -150,7 +158,7 @@ a { color: inherit; }
   line-height: 1;
   font-weight: 850;
   letter-spacing: 0.12em;
-  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.48);
+  text-shadow: 0 3px 16px rgba(0, 0,0,0.48);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -260,10 +268,11 @@ a { color: inherit; }
 @media (max-width: 760px) {
   .nav-shell,
   .section-shell { width: min(100% - 28px, 1180px); }
-  .nav-shell { min-height: 70px; }
+  .nav-shell { min-height: 70px; gap: 14px; }
+  .brand { min-height: 42px; }
   .brand-copy small,
   .main-nav a:first-child { display: none; }
-  .nav-actions { gap: 0; }
+  .nav-actions { min-height: 42px; gap: 0; }
   .main-nav { gap: 14px; }
 
   .hero {

@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0f2d22">
   <title>Free Syrians | أحرار سوريا</title>
   <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="mobile-nav.css?v=1">
   <style>
     @media (max-width: 760px) {
       .hero-title { top: 38%; }
@@ -24,7 +25,13 @@
         </span>
       </a>
 
-      <div class="nav-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu">
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-actions" id="mobile-navigation">
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#top" aria-current="page">Home</a>
           <a href="#about">About</a>
@@ -164,5 +171,7 @@
       <p>FreeSyrians.ca</p>
     </div>
   </footer>
+
+  <script src="mobile-nav.js?v=1" defer></script>
 </body>
 </html>

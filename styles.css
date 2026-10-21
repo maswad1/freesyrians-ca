@@ -259,6 +259,32 @@ a { color: inherit; }
   font-weight: 750;
 }
 
+.places-block { margin-top: 38px; }
+.places-heading {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.place-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+.place-card h3 {
+  margin: 0;
+  font-size: 1.22rem;
+}
+.language-section .place-card p {
+  margin: 8px 0 0;
+  font-size: 0.94rem;
+}
+
 .site-footer { padding: 36px 0; background: #0c2119; color: rgba(255, 255, 255, 0.78); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .footer-inner > div { display: flex; gap: 16px; align-items: center; }
@@ -313,6 +339,7 @@ a { color: inherit; }
 
   .intro-section,
   .language-section { padding: 68px 0; }
+  .places-grid { grid-template-columns: 1fr; }
   .footer-inner,
   .footer-inner > div { align-items: flex-start; flex-direction: column; }
 }

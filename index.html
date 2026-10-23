@@ -9,9 +9,61 @@
   <link rel="stylesheet" href="styles.css?v=26">
   <link rel="stylesheet" href="mobile-nav.css?v=1">
   <style>
+    .history-timeline {
+      position: relative;
+      margin-top: 38px;
+      padding-left: 34px;
+    }
+    .history-timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 8px;
+      width: 2px;
+      background: rgba(20, 122, 77, 0.24);
+    }
+    .history-step {
+      position: relative;
+      padding: 0 0 30px 18px;
+    }
+    .history-step:last-child { padding-bottom: 0; }
+    .history-step::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -32px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid #f3f6f3;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 1px rgba(20, 122, 77, 0.28);
+    }
+    .history-date {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .history-step h3 {
+      margin: 0;
+      font-size: 1.28rem;
+      letter-spacing: -0.02em;
+    }
+    .language-section .history-step p {
+      margin: 7px 0 0;
+      font-size: 0.96rem;
+    }
     @media (max-width: 760px) {
       .hero-title { top: 38%; }
       .hero-title-ar { top: calc(38% + 2rem); }
+      .history-timeline { padding-left: 28px; }
+      .history-step { padding-left: 14px; }
+      .history-step::before { left: -26px; }
     }
   </style>
 </head>
@@ -150,10 +202,41 @@
         <div>
           <p class="section-label">MODERN SYRIAN HISTORY</p>
           <h2>From Assad family rule to revolution, December 8, and Syria’s transition.</h2>
-          <p>Hafez al-Assad took power in 1970 and ruled Syria until his death in 2000. His son Bashar al-Assad succeeded him, continuing a highly centralized political and security system that would shape Syrian public life for decades.</p>
-          <p>In 2011, protests calling for political change spread across Syria and were met by arrests and violence from security forces. The uprising developed into a devastating war involving Syrian factions and foreign powers, killing hundreds of thousands of people and displacing millions inside Syria and abroad.</p>
-          <p>On December 8, 2024, opposition forces entered Damascus and Bashar al-Assad fled the country, ending more than five decades of Assad family rule. For many Syrians who had opposed the Assad government, the date became a symbol of liberation after years of revolution, war, imprisonment, displacement, and loss.</p>
-          <p>Syria then entered a new and difficult transition. Under President Ahmed al-Sharaa, the country is rebuilding institutions and international relationships while confronting questions of security, accountability, missing persons, displaced communities, reconstruction, national unity, and the political future. This section will document that modern history chronologically and with sources so that the record can be understood in context.</p>
+          <p>Syria’s recent history can be understood through several major periods. This timeline gives visitors the basic sequence before we expand each period with documents, photographs, testimony, and sources.</p>
+
+          <div class="history-timeline" aria-label="Modern Syrian history timeline">
+            <article class="history-step">
+              <span class="history-date">1970–2000</span>
+              <h3>Hafez al-Assad</h3>
+              <p>Hafez al-Assad took power in 1970 and ruled Syria until his death in 2000, building a highly centralized political and security system.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2000–2011</span>
+              <h3>Bashar al-Assad</h3>
+              <p>Bashar al-Assad succeeded his father in 2000. Expectations of political opening faded as the state remained dominated by centralized rule and powerful security institutions.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2011–2024</span>
+              <h3>Uprising, war, and displacement</h3>
+              <p>Protests calling for political change spread across Syria in 2011 and were met by arrests and violence from security forces. The uprising developed into a devastating war involving Syrian factions and foreign powers, killing hundreds of thousands and displacing millions.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">December 8, 2024</span>
+              <h3>The Assad government falls</h3>
+              <p>Opposition forces entered Damascus and Bashar al-Assad fled Syria, ending more than five decades of Assad family rule. For many Syrians who opposed the government, December 8 became a symbol of liberation after years of revolution, imprisonment, displacement, and loss.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2024–Present</span>
+              <h3>Transition and rebuilding</h3>
+              <p>Under President Ahmed al-Sharaa, Syria is rebuilding institutions and international relationships while confronting security, accountability, missing persons, displaced communities, reconstruction, national unity, and the country’s political future.</p>
+            </article>
+          </div>
+
+          <p>This section will grow chronologically and with sources so visitors can distinguish documented history, testimony, interpretation, and continuing developments.</p>
         </div>
       </div>
     </section>

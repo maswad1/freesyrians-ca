@@ -28,3 +28,11 @@
     if (event.matches) setOpen(false);
   });
 })();
+
+(() => {
+  if (!document.querySelector('#media-watch')) return;
+  const script = document.createElement('script');
+  script.src = 'media-watch.js?v=1';
+  script.defer = true;
+  document.body.appendChild(script);
+})();

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="اكتشف دمشق — تاريخها ومدينتها القديمة وجبل قاسيون وثقافتها ومكانتها في سوريا.">
+  <meta name="theme-color" content="#0f2d22">
+  <title>دمشق | أحرار سوريا</title>
+  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="mobile-nav.css?v=1">
+  <style>
+    body { direction: rtl; text-align: right; font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+    .nav-actions { margin-left: 0; margin-right: auto; }
+    .language-switch { direction: ltr; }
+    .city-page { min-height: calc(100vh - 78px); padding: 86px 0 110px; background: #f7f8f6; }
+    .city-hero { max-width: 900px; margin-bottom: 46px; }
+    .city-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .95; letter-spacing: 0; }
+    .city-hero .city-en { margin: 12px 0 0; color: var(--green); font-size: 1.15rem; font-weight: 750; direction: ltr; text-align: right; }
+    .city-hero > p:last-child { max-width: 760px; margin: 26px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .city-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; margin: 0 0 24px; }
+    .city-gallery figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-gallery img { width: 100%; height: auto; display: block; }
+    .city-gallery figcaption { padding: 12px 16px 14px; color: var(--muted); font-size: .9rem; }
+    .city-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; }
+    .city-card { padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-card h2 { margin: 0 0 12px; font-size: 1.55rem; letter-spacing: 0; }
+    .city-card p { margin: 0; color: var(--muted); }
+    .city-back { display: inline-flex; margin-top: 38px; font-weight: 750; color: var(--deep-green); text-decoration: none; }
+    @media (max-width: 980px) { .menu-toggle { margin-left: 0; margin-right: auto; } .language-switch { align-self: flex-end; } }
+    @media (max-width: 760px) { .city-page { padding: 54px 0 80px; } .city-gallery, .city-grid { grid-template-columns: 1fr; } .city-card { padding: 24px; } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index-ar.html" aria-label="الصفحة الرئيسية لأحرار سوريا"><span class="brand-copy"><strong>FREE SYRIANS</strong><small>أحرار سوريا</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="فتح قائمة التنقل"><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span></button>
+      <div class="nav-actions" id="mobile-navigation">
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <a href="index-ar.html">الرئيسية</a><a href="index-ar.html#about">من نحن</a><a href="index-ar.html#mission">رسالتنا</a><a href="index-ar.html#syria" aria-current="page">سوريا</a><a href="index-ar.html#modern-history">التاريخ الحديث</a><a href="index-ar.html#stories">قصص</a><a href="index-ar.html#events">فعاليات</a><a href="index-ar.html#media-watch">رصد الإعلام</a><a href="index-ar.html#resources">موارد</a><a href="index-ar.html#contact">تواصل</a>
+        </nav>
+        <div class="language-switch" aria-label="اختيار اللغة"><a href="damascus.html" lang="en">EN</a><span class="language-divider">|</span><a href="damascus-ar.html" aria-current="page">العربية</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="city-page">
+    <div class="section-shell">
+      <section class="city-hero" aria-labelledby="damascus-title">
+        <p class="section-label">اكتشف سوريا</p>
+        <h1 id="damascus-title">دمشق</h1>
+        <p class="city-en" lang="en">Damascus</p>
+        <p>دمشق عاصمة سوريا وإحدى المدن التاريخية الكبرى في المنطقة. تشكلت هويتها عبر طرق التجارة القديمة والدين والعلم والحِرف والعمارة والحياة العائلية وأجيال من الناس الذين جعلوا المدينة موطنهم.</p>
+      </section>
+
+      <div class="city-gallery" aria-label="صور دمشق">
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Damascus%2C_Syria%2C_The_Old_City_of_Damascus.jpg" alt="شارع في مدينة دمشق القديمة" loading="lazy"><figcaption>دمشق القديمة · الصورة: Vyacheslav Argenberg، عبر Wikimedia Commons (CC BY 4.0).</figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Qasiyon_Damascus.JPG" alt="جبل قاسيون المطل على دمشق" loading="lazy"><figcaption>جبل قاسيون المطل على دمشق · الصورة: Aziz1005، عبر Wikimedia Commons (ملكية عامة).</figcaption></figure>
+      </div>
+
+      <div class="city-grid">
+        <article class="city-card"><h2>دمشق القديمة</h2><p>يُعرف القلب التاريخي للمدينة بأزقته الضيقة وبيوته الدمشقية ذات الباحات والأسواق ودور العبادة وطبقات العمارة التي تنتمي إلى عصور متعددة. وتعكس معالم مثل الجامع الأموي والشارع المستقيم والأسواق القديمة تاريخ المدينة الطويل والمعقد.</p></article>
+        <article class="city-card"><h2>جبل قاسيون</h2><p>يرتفع قاسيون فوق دمشق وكان جزءاً من هويتها البصرية منذ زمن طويل. ومن سفوحه تمتد المدينة على السهل في الأسفل، ما جعله رمزاً مألوفاً لدمشق لدى السكان والزوار والسوريين في الاغتراب.</p></article>
+        <article class="city-card"><h2>تراث حي</h2><p>دمشق ليست مجموعة من المعالم فقط. ثقافتها تعيش في الطعام والموسيقى والحِرف والتقاليد العائلية والأحياء والحدائق والمقاهي والأسواق والذكريات اليومية لأجيال من أهلها.</p></article>
+        <article class="city-card"><h2>دمشق الحديثة</h2><p>إلى جانب المدينة القديمة، دمشق عاصمة حديثة تضم أحياء ومجتمعات متعددة. وتشمل قصتها المعاصرة التعليم والأعمال والفن والهجرة والتحولات الاجتماعية والصعوبات والقدرة على الصمود واستمرار علاقة السوريين بعاصمتهم.</p></article>
+      </div>
+
+      <a class="city-back" href="index-ar.html#syria">العودة إلى سوريا ←</a>
+    </div>
+  </main>
+
+  <footer class="site-footer"><div class="section-shell footer-inner"><div><strong>FREE SYRIANS</strong><span>أحرار سوريا</span></div><p>FreeSyrians.ca · <a href="privacy.html">الخصوصية</a> · <a href="terms.html">الشروط / إخلاء المسؤولية</a></p></div></footer>
+  <script src="mobile-nav-ar.js?v=1" defer></script>
+</body>
+</html>

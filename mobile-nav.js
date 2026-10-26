@@ -127,3 +127,48 @@
     </div>
   `;
 })();
+
+(() => {
+  const inner = document.querySelector('#stories .language-section-inner');
+  if (!inner) return;
+
+  const copy = inner.querySelector('div');
+  if (!copy) return;
+
+  copy.innerHTML = `
+    <p class="section-label">SYRIAN STORIES</p>
+    <h2>Share a story that should not be lost.</h2>
+    <p>Free Syrians welcomes personal memories, eyewitness accounts, family histories, photographs, reflections, and experiences from Syrians inside Syria and throughout the diaspora.</p>
+
+    <div class="places-block" aria-label="Share a Syrian story">
+      <div class="places-grid">
+        <div class="place-card">
+          <h3>What to share</h3>
+          <p>A memory of a city or neighborhood, a family experience, displacement or return, a personal turning point, community life, cultural traditions, or another part of Syria’s lived history.</p>
+        </div>
+        <div class="place-card">
+          <h3>What you can send</h3>
+          <p>Written stories, photographs, scanned documents, captions, audio or video references, and background information that helps preserve the context.</p>
+        </div>
+        <div class="place-card">
+          <h3>Your identity</h3>
+          <p>Tell us whether you want your name shown, prefer limited identification, or would like your submission considered anonymously.</p>
+        </div>
+        <div class="place-card">
+          <h3>Before publication</h3>
+          <p>Submissions may be edited for clarity and context. Free Syrians will review material before deciding whether it is appropriate for publication.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Send your story or idea to <a href="mailto:info@freesyrians.ca?subject=Syrian%20Story%20Submission">info@freesyrians.ca</a>.</p>
+  `;
+
+  if (!inner.querySelector('.section-button')) {
+    const storyButton = document.createElement('a');
+    storyButton.className = 'section-button';
+    storyButton.href = 'mailto:info@freesyrians.ca?subject=Syrian%20Story%20Submission';
+    storyButton.textContent = 'Share Your Story';
+    inner.appendChild(storyButton);
+  }
+})();

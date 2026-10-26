@@ -189,3 +189,31 @@
     <p>If a serious issue remains unresolved, concerns may be raised through appropriate publisher complaint procedures, professional bodies, or lawful regulatory channels. Criticism is not treated as misinformation simply because Free Syrians disagrees with it.</p>
   `;
 })();
+
+(() => {
+  const about = document.querySelector('#about .intro-copy');
+  if (about) {
+    about.innerHTML = `
+      <p class="section-label">WHO WE ARE</p>
+      <h2>An independent platform for information, memory, and connection.</h2>
+      <p>Free Syrians brings together reliable information, Syrian stories, community resources, events, and cultural and historical material for Syrians and friends of Syria around the world.</p>
+      <p>Our work is organized around three practical roles: helping people understand Syria, supporting Syrian voices and dignity, and connecting people who want to contribute positively to the community and the country’s future.</p>
+    `;
+  }
+})();
+
+(() => {
+  const inner = document.querySelector('#mission .language-section-inner');
+  if (!inner) return;
+
+  const copy = inner.querySelector('div');
+  if (!copy) return;
+
+  copy.innerHTML = `
+    <p class="section-label">OUR MISSION</p>
+    <h2>Preserve truth, dignity, memory, and participation in Syria’s future.</h2>
+    <p>We believe Syria belongs to all its people. Every Syrian should be able to live with dignity, enjoy individual rights, and participate freely in shaping the country’s future.</p>
+    <p>Our mission is to preserve Syrian voices and historical memory, encourage accurate public understanding, defend human dignity, and keep meaningful connections alive between Syrians inside the country and throughout the diaspora.</p>
+    <p>We aim to remember what happened, document what matters, support constructive dialogue, and contribute to a future built on freedom, justice, diversity, and responsibility.</p>
+  `;
+})();

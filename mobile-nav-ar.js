@@ -28,3 +28,11 @@
     if (event.matches) setOpen(false);
   });
 })();
+
+(() => {
+  document.querySelectorAll('.site-footer a').forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href === 'privacy.html') link.setAttribute('href', 'privacy-ar.html');
+    if (href === 'terms.html') link.setAttribute('href', 'terms-ar.html');
+  });
+})();

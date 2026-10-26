@@ -91,3 +91,39 @@
     <p>These are independent external resources. Inclusion here does not mean Free Syrians endorses every statement or position published by these organizations.</p>
   `;
 })();
+
+(() => {
+  const inner = document.querySelector('#events .language-section-inner');
+  if (!inner) return;
+
+  const copy = inner.querySelector('div');
+  if (!copy) return;
+
+  copy.innerHTML = `
+    <p class="section-label">UPCOMING EVENT</p>
+    <h2>Syrian Liberation Celebration</h2>
+    <p><strong>December 6, 2026 · Evening</strong></p>
+    <p>Free Syrians is preparing a community celebration ahead of Syrian Liberation Day on December 8. The evening is planned to bring Syrians and friends of Syria together to mark the occasion, celebrate community, and look toward Syria’s future.</p>
+
+    <div class="places-block" aria-label="Syrian Liberation Celebration details">
+      <div class="places-grid">
+        <div class="place-card">
+          <h3>Program</h3>
+          <p>Planned live singer performance, music, community recognition, and an opportunity for guests and supporters to participate.</p>
+        </div>
+        <div class="place-card">
+          <h3>Hospitality</h3>
+          <p>Finger food and drinks are planned for guests during the evening.</p>
+        </div>
+        <div class="place-card">
+          <h3>Venue</h3>
+          <p>Venue and final event details will be announced once confirmed.</p>
+        </div>
+        <div class="place-card">
+          <h3>Participation & Sponsorship</h3>
+          <p>For participation or sponsorship inquiries, contact <a href="mailto:info@freesyrians.ca">info@freesyrians.ca</a>.</p>
+        </div>
+      </div>
+    </div>
+  `;
+})();

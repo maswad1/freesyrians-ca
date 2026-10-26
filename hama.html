@@ -7,149 +7,29 @@
   <meta name="theme-color" content="#0f2d22">
   <title>Hama | Free Syrians</title>
   <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="mobile-nav.css?v=1">
   <style>
-    .city-page {
-      min-height: calc(100vh - 78px);
-      padding: 86px 0 110px;
-      background: #f7f8f6;
-    }
-    .city-hero {
-      max-width: 900px;
-      margin-bottom: 34px;
-    }
-    .city-hero h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-    .city-hero .city-ar {
-      margin: 12px 0 0;
-      color: var(--green);
-      font-size: 1.35rem;
-      font-weight: 750;
-    }
-    .city-hero > p:last-child {
-      max-width: 760px;
-      margin: 26px 0 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .city-photo {
-      max-width: 1000px;
-      margin: 0 0 42px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--white);
-    }
-    .city-photo img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .city-photo figcaption {
-      padding: 12px 16px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
+    .city-page { min-height: calc(100vh - 78px); padding: 86px 0 110px; background: #f7f8f6; }
+    .city-hero { max-width: 900px; margin-bottom: 34px; }
+    .city-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .95; letter-spacing: -.055em; }
+    .city-hero .city-ar { margin: 12px 0 0; color: var(--green); font-size: 1.35rem; font-weight: 750; }
+    .city-hero > p:last-child { max-width: 760px; margin: 26px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .city-photo { max-width: 1000px; margin: 0 0 42px; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--white); }
+    .city-photo img { display: block; width: 100%; height: auto; }
+    .city-photo figcaption { padding: 12px 16px; color: var(--muted); font-size: .88rem; }
     .city-photo a { color: inherit; }
-    .city-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-    }
-    .city-card {
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--white);
-    }
-    .city-card h2 {
-      margin: 0 0 12px;
-      font-size: 1.55rem;
-      letter-spacing: -0.025em;
-    }
-    .city-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-    .city-back {
-      display: inline-flex;
-      margin-top: 38px;
-      font-weight: 750;
-      color: var(--deep-green);
-      text-decoration: none;
-    }
-    @media (max-width: 760px) {
-      .city-page { padding: 54px 0 80px; }
-      .city-grid { grid-template-columns: 1fr; }
-      .city-card { padding: 24px; }
-      .city-photo { border-radius: 18px; }
-    }
+    .city-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; }
+    .city-card { padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-card h2 { margin: 0 0 12px; font-size: 1.55rem; letter-spacing: -.025em; }
+    .city-card p { margin: 0; color: var(--muted); }
+    .city-back { display: inline-flex; margin-top: 38px; font-weight: 750; color: var(--deep-green); text-decoration: none; }
+    @media (max-width: 760px) { .city-page { padding: 54px 0 80px; } .city-grid { grid-template-columns: 1fr; } .city-card { padding: 24px; } .city-photo { border-radius: 18px; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="Free Syrians home">
-        <span class="brand-copy">
-          <strong>FREE SYRIANS</strong>
-          <small lang="ar" dir="rtl">أحرار سوريا</small>
-        </span>
-      </a>
-    </div>
-  </header>
-
-  <main class="city-page">
-    <div class="section-shell">
-      <section class="city-hero" aria-labelledby="hama-title">
-        <p class="section-label">EXPLORE SYRIA</p>
-        <h1 id="hama-title">Hama</h1>
-        <p class="city-ar" lang="ar" dir="rtl">حماة</p>
-        <p>Hama is a historic city on the Orontes River in west-central Syria. Its identity is closely connected to the river, its neighborhoods and markets, and especially the great wooden Norias that have become one of Syria’s most recognizable cultural landmarks.</p>
-      </section>
-
-      <figure class="city-photo">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Syria_46_-_Hama_-_Norias.jpg" alt="Historic wooden Norias on the Orontes River in Hama, Syria" loading="lazy">
-        <figcaption>Hama’s Norias on the Orontes. Photo by Graham of the Wheels (gray_um), <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Syria_46_-_Hama_-_Norias.jpg">Wikimedia Commons</a>.</figcaption>
-      </figure>
-
-      <div class="city-grid">
-        <article class="city-card">
-          <h2>The Orontes and the Norias</h2>
-          <p>For generations, Hama’s enormous wooden waterwheels lifted water from the Orontes into aqueducts that supplied gardens and agricultural land. The Norias remain a defining symbol of the city and are included on Syria’s UNESCO Tentative List.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Deep Historical Roots</h2>
-          <p>Hama has been inhabited across many periods of Syrian history. Its location along the Orontes helped make it an important regional center linking communities, agriculture, commerce, and routes through the interior of the country.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Culture and Community</h2>
-          <p>The city’s character lives in its riverfront, markets, neighborhoods, cuisine, family traditions, religious sites, crafts, and the everyday memories of people who have called Hama home across generations.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Memory and Continuity</h2>
-          <p>Hama’s modern history includes periods of profound trauma and loss, but the city cannot be reduced to those events. Its people continue to preserve its identity, relationships, traditions, and connection to place inside Syria and throughout the diaspora.</p>
-        </article>
-      </div>
-
-      <a class="city-back" href="index.html#syria">← Back to Syria</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <div>
-        <strong>FREE SYRIANS</strong>
-        <span lang="ar" dir="rtl">أحرار سوريا</span>
-      </div>
-      <p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p>
-    </div>
-  </footer>
+  <header class="site-header"><div class="nav-shell"><a class="brand" href="index.html" aria-label="Free Syrians home"><span class="brand-copy"><strong>FREE SYRIANS</strong><small lang="ar" dir="rtl">أحرار سوريا</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu"><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span></button><div class="nav-actions" id="mobile-navigation"><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#mission">Our Mission</a><a href="index.html#syria" aria-current="page">Syria</a><a href="index.html#modern-history">Modern History</a><a href="index.html#stories">Stories</a><a href="index.html#events">Events</a><a href="index.html#media-watch">Media Watch</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a></nav><div class="language-switch" aria-label="Language selection"><a href="hama.html" lang="en" aria-current="page">EN</a><span class="language-divider">|</span><a href="hama-ar.html" lang="ar" dir="rtl">العربية</a></div></div></div></header>
+  <main class="city-page"><div class="section-shell"><section class="city-hero" aria-labelledby="hama-title"><p class="section-label">EXPLORE SYRIA</p><h1 id="hama-title">Hama</h1><p class="city-ar" lang="ar" dir="rtl">حماة</p><p>Hama is a historic city on the Orontes River in west-central Syria. Its identity is closely connected to the river, its neighborhoods and markets, and especially the great wooden Norias that have become one of Syria’s most recognizable cultural landmarks.</p></section><figure class="city-photo"><img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Syria_46_-_Hama_-_Norias.jpg" alt="Historic wooden Norias on the Orontes River in Hama, Syria" loading="lazy"><figcaption>Hama’s Norias on the Orontes. Photo by Graham of the Wheels (gray_um), <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Syria_46_-_Hama_-_Norias.jpg">Wikimedia Commons</a>.</figcaption></figure><div class="city-grid"><article class="city-card"><h2>The Orontes and the Norias</h2><p>For generations, Hama’s enormous wooden waterwheels lifted water from the Orontes into aqueducts that supplied gardens and agricultural land. The Norias remain a defining symbol of the city and are included on Syria’s UNESCO Tentative List.</p></article><article class="city-card"><h2>Deep Historical Roots</h2><p>Hama has been inhabited across many periods of Syrian history. Its location along the Orontes helped make it an important regional center linking communities, agriculture, commerce, and routes through the interior of the country.</p></article><article class="city-card"><h2>Culture and Community</h2><p>The city’s character lives in its riverfront, markets, neighborhoods, cuisine, family traditions, religious sites, crafts, and the everyday memories of people who have called Hama home across generations.</p></article><article class="city-card"><h2>Memory and Continuity</h2><p>Hama’s modern history includes periods of profound trauma and loss, but the city cannot be reduced to those events. Its people continue to preserve its identity, relationships, traditions, and connection to place inside Syria and throughout the diaspora.</p></article></div><a class="city-back" href="index.html#syria">← Back to Syria</a></div></main>
+  <footer class="site-footer"><div class="section-shell footer-inner"><div><strong>FREE SYRIANS</strong><span lang="ar" dir="rtl">أحرار سوريا</span></div><p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p></div></footer>
+  <script src="mobile-nav.js?v=1" defer></script>
 </body>
 </html>

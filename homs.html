@@ -7,148 +7,28 @@
   <meta name="theme-color" content="#0f2d22">
   <title>Homs | Free Syrians</title>
   <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="mobile-nav.css?v=1">
   <style>
-    .city-page {
-      min-height: calc(100vh - 78px);
-      padding: 86px 0 110px;
-      background: #f7f8f6;
-    }
-    .city-hero {
-      max-width: 900px;
-      margin-bottom: 34px;
-    }
-    .city-hero h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-    .city-hero .city-ar {
-      margin: 12px 0 0;
-      color: var(--green);
-      font-size: 1.35rem;
-      font-weight: 750;
-    }
-    .city-hero > p:last-child {
-      max-width: 760px;
-      margin: 26px 0 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .city-photo {
-      max-width: 1000px;
-      margin: 0 0 42px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: var(--white);
-    }
-    .city-photo img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    .city-photo figcaption {
-      padding: 12px 16px;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-    .city-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-    }
-    .city-card {
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--white);
-    }
-    .city-card h2 {
-      margin: 0 0 12px;
-      font-size: 1.55rem;
-      letter-spacing: -0.025em;
-    }
-    .city-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-    .city-back {
-      display: inline-flex;
-      margin-top: 38px;
-      font-weight: 750;
-      color: var(--deep-green);
-      text-decoration: none;
-    }
-    @media (max-width: 760px) {
-      .city-page { padding: 54px 0 80px; }
-      .city-grid { grid-template-columns: 1fr; }
-      .city-card { padding: 24px; }
-      .city-photo { border-radius: 18px; }
-    }
+    .city-page { min-height: calc(100vh - 78px); padding: 86px 0 110px; background: #f7f8f6; }
+    .city-hero { max-width: 900px; margin-bottom: 34px; }
+    .city-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .95; letter-spacing: -.055em; }
+    .city-hero .city-ar { margin: 12px 0 0; color: var(--green); font-size: 1.35rem; font-weight: 750; }
+    .city-hero > p:last-child { max-width: 760px; margin: 26px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .city-photo { max-width: 1000px; margin: 0 0 42px; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--white); }
+    .city-photo img { display: block; width: 100%; height: auto; }
+    .city-photo figcaption { padding: 12px 16px; color: var(--muted); font-size: .88rem; }
+    .city-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; }
+    .city-card { padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-card h2 { margin: 0 0 12px; font-size: 1.55rem; letter-spacing: -.025em; }
+    .city-card p { margin: 0; color: var(--muted); }
+    .city-back { display: inline-flex; margin-top: 38px; font-weight: 750; color: var(--deep-green); text-decoration: none; }
+    @media (max-width: 760px) { .city-page { padding: 54px 0 80px; } .city-grid { grid-template-columns: 1fr; } .city-card { padding: 24px; } .city-photo { border-radius: 18px; } }
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="Free Syrians home">
-        <span class="brand-copy">
-          <strong>FREE SYRIANS</strong>
-          <small lang="ar" dir="rtl">أحرار سوريا</small>
-        </span>
-      </a>
-    </div>
-  </header>
-
-  <main class="city-page">
-    <div class="section-shell">
-      <section class="city-hero" aria-labelledby="homs-title">
-        <p class="section-label">EXPLORE SYRIA</p>
-        <h1 id="homs-title">Homs</h1>
-        <p class="city-ar" lang="ar" dir="rtl">حمص</p>
-        <p>Homs is one of Syria’s major cities, situated near the country’s geographic heart. For centuries it has connected regions, communities, trade routes, traditions, and generations of Syrians whose memories are deeply tied to the city.</p>
-      </section>
-
-      <figure class="city-photo">
-        <img src="assets/images/homs-archive.webp" alt="Archival view of Homs from the original Free Syrians website" loading="lazy">
-        <figcaption>Homs — image preserved from the original FreeSyrians.ca collection.</figcaption>
-      </figure>
-
-      <div class="city-grid">
-        <article class="city-card">
-          <h2>A Crossroads in Syria</h2>
-          <p>Homs has long occupied an important position between Damascus, northern Syria, the Mediterranean coast, and the interior. That location helped shape the city as a place of movement, exchange, commerce, and cultural connection.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Heritage and Neighborhoods</h2>
-          <p>The city’s identity is found not only in monuments but also in its neighborhoods, places of worship, markets, homes, family traditions, local food, humor, music, and the everyday life remembered by generations of residents.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Modern Experience</h2>
-          <p>Homs endured profound hardship, destruction, displacement, and loss during Syria’s modern conflict. Its recent history is inseparable from the experiences of residents who stayed, left, returned, rebuilt, or carried memories of the city elsewhere.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>A Living City</h2>
-          <p>Homs remains more than the events that damaged it. Its story continues through its people, communities, culture, education, businesses, traditions, and the many Syrians who still identify strongly with the city wherever they live.</p>
-        </article>
-      </div>
-
-      <a class="city-back" href="index.html#syria">← Back to Syria</a>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <div>
-        <strong>FREE SYRIANS</strong>
-        <span lang="ar" dir="rtl">أحرار سوريا</span>
-      </div>
-      <p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p>
-    </div>
-  </footer>
+  <header class="site-header"><div class="nav-shell"><a class="brand" href="index.html" aria-label="Free Syrians home"><span class="brand-copy"><strong>FREE SYRIANS</strong><small lang="ar" dir="rtl">أحرار سوريا</small></span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu"><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span><span class="menu-toggle-line"></span></button><div class="nav-actions" id="mobile-navigation"><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#mission">Our Mission</a><a href="index.html#syria" aria-current="page">Syria</a><a href="index.html#modern-history">Modern History</a><a href="index.html#stories">Stories</a><a href="index.html#events">Events</a><a href="index.html#media-watch">Media Watch</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a></nav><div class="language-switch" aria-label="Language selection"><a href="homs.html" lang="en" aria-current="page">EN</a><span class="language-divider">|</span><a href="homs-ar.html" lang="ar" dir="rtl">العربية</a></div></div></div></header>
+  <main class="city-page"><div class="section-shell"><section class="city-hero" aria-labelledby="homs-title"><p class="section-label">EXPLORE SYRIA</p><h1 id="homs-title">Homs</h1><p class="city-ar" lang="ar" dir="rtl">حمص</p><p>Homs is one of Syria’s major cities, situated near the country’s geographic heart. For centuries it has connected regions, communities, trade routes, traditions, and generations of Syrians whose memories are deeply tied to the city.</p></section><figure class="city-photo"><img src="assets/images/homs-archive.webp" alt="Archival view of Homs from the original Free Syrians website" loading="lazy"><figcaption>Homs — image preserved from the original FreeSyrians.ca collection.</figcaption></figure><div class="city-grid"><article class="city-card"><h2>A Crossroads in Syria</h2><p>Homs has long occupied an important position between Damascus, northern Syria, the Mediterranean coast, and the interior. That location helped shape the city as a place of movement, exchange, commerce, and cultural connection.</p></article><article class="city-card"><h2>Heritage and Neighborhoods</h2><p>The city’s identity is found not only in monuments but also in its neighborhoods, places of worship, markets, homes, family traditions, local food, humor, music, and the everyday life remembered by generations of residents.</p></article><article class="city-card"><h2>Modern Experience</h2><p>Homs endured profound hardship, destruction, displacement, and loss during Syria’s modern conflict. Its recent history is inseparable from the experiences of residents who stayed, left, returned, rebuilt, or carried memories of the city elsewhere.</p></article><article class="city-card"><h2>A Living City</h2><p>Homs remains more than the events that damaged it. Its story continues through its people, communities, culture, education, businesses, traditions, and the many Syrians who still identify strongly with the city wherever they live.</p></article></div><a class="city-back" href="index.html#syria">← Back to Syria</a></div></main>
+  <footer class="site-footer"><div class="section-shell footer-inner"><div><strong>FREE SYRIANS</strong><span lang="ar" dir="rtl">أحرار سوريا</span></div><p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p></div></footer>
+  <script src="mobile-nav.js?v=1" defer></script>
 </body>
 </html>

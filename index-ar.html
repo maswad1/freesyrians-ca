@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="أحرار سوريا — منصة للمعلومات والذاكرة والتواصل بين السوريين وأصدقاء سوريا حول العالم.">
+  <meta name="theme-color" content="#0f2d22">
+  <title>أحرار سوريا | Free Syrians</title>
+  <link rel="stylesheet" href="styles.css?v=26">
+  <link rel="stylesheet" href="mobile-nav.css?v=1">
+  <style>
+    body {
+      direction: rtl;
+      text-align: right;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    .nav-actions { margin-left: 0; margin-right: auto; }
+    .main-nav a::after { transform-origin: right; }
+    .section-label { letter-spacing: 0; text-transform: none; }
+    .language-switch { direction: ltr; }
+    .history-timeline {
+      position: relative;
+      margin-top: 38px;
+      padding-left: 0;
+      padding-right: 34px;
+    }
+    .history-timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: auto;
+      right: 8px;
+      width: 2px;
+      background: rgba(20, 122, 77, 0.24);
+    }
+    .history-step {
+      position: relative;
+      padding: 0 18px 30px 0;
+    }
+    .history-step:last-child { padding-bottom: 0; }
+    .history-step::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: auto;
+      right: -32px;
+      width: 14px;
+      height: 14px;
+      border: 3px solid #f3f6f3;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 1px rgba(20, 122, 77, 0.28);
+    }
+    .history-date {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+      font-size: 0.82rem;
+      font-weight: 850;
+    }
+    .history-step h3 {
+      margin: 0;
+      font-size: 1.28rem;
+      letter-spacing: 0;
+    }
+    .language-section .history-step p {
+      margin: 7px 0 0;
+      font-size: 0.96rem;
+    }
+    @media (max-width: 980px) {
+      .menu-toggle { margin-left: 0; margin-right: auto; }
+      .language-switch { align-self: flex-end; }
+    }
+    @media (max-width: 760px) {
+      .hero-title { top: 38%; }
+      .hero-title-ar { top: calc(38% + 2rem); }
+      .history-timeline { padding-right: 28px; }
+      .history-step { padding-right: 14px; }
+      .history-step::before { right: -26px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="الصفحة الرئيسية لأحرار سوريا">
+        <span class="brand-copy">
+          <strong>FREE SYRIANS</strong>
+          <small>أحرار سوريا</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="فتح قائمة التنقل">
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+        <span class="menu-toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-actions" id="mobile-navigation">
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <a href="#top" aria-current="page">الرئيسية</a>
+          <a href="#about">من نحن</a>
+          <a href="#mission">رسالتنا</a>
+          <a href="#syria">سوريا</a>
+          <a href="#modern-history">التاريخ الحديث</a>
+          <a href="#stories">قصص</a>
+          <a href="#events">فعاليات</a>
+          <a href="#media-watch">رصد الإعلام</a>
+          <a href="#resources">موارد</a>
+          <a href="#contact">تواصل</a>
+        </nav>
+        <div class="language-switch" aria-label="اختيار اللغة">
+          <a href="index.html" lang="en">EN</a>
+          <span class="language-divider" aria-hidden="true">|</span>
+          <a href="index-ar.html" aria-current="page">العربية</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="شعار أحرار سوريا والعلم السوري">
+      <svg class="hero-art" viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <image href="assets/images/hero-eagle-flag-1.webp?v=7" x="0" y="0" width="300" height="720" preserveAspectRatio="none" />
+        <image href="assets/images/hero-eagle-flag-2.webp?v=7" x="300" y="0" width="300" height="720" preserveAspectRatio="none" />
+        <image href="assets/images/hero-eagle-flag-3.webp?v=7" x="600" y="0" width="300" height="720" preserveAspectRatio="none" />
+        <image href="assets/images/hero-eagle-flag-4.webp?v=7" x="900" y="0" width="300" height="720" preserveAspectRatio="none" />
+      </svg>
+      <h1 class="hero-title">FREE SYRIANS</h1>
+      <p class="hero-title-ar">أحرار سوريا</p>
+    </section>
+
+    <section id="about" class="intro-section" aria-label="من نحن">
+      <div class="section-shell intro-grid">
+        <div class="intro-copy">
+          <p class="section-label">من نحن</p>
+          <h2>منصة مستقلة للمعلومات والذاكرة والتواصل.</h2>
+          <p>تجمع أحرار سوريا المعلومات الموثوقة والقصص السورية والموارد المجتمعية والفعاليات والمواد الثقافية والتاريخية لخدمة السوريين وأصدقاء سوريا حول العالم.</p>
+          <p>يرتكز عملنا على ثلاثة أدوار عملية: مساعدة الناس على فهم سوريا، دعم أصوات السوريين وكرامتهم، وربط الأشخاص الذين يريدون الإسهام بشكل إيجابي في المجتمع ومستقبل البلاد.</p>
+        </div>
+
+        <div class="principles" aria-label="ما الذي تقوم به أحرار سوريا">
+          <article>
+            <span>01</span>
+            <h3>التوعية</h3>
+            <p>تقديم السياق والتاريخ والقصص والموارد التي تساعد على فهم سوريا وتجارب شعبها.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>المناصرة</h3>
+            <p>الدفاع عن حقوق السوريين وحريتهم وكرامتهم ومشاركتهم الفاعلة داخل سوريا وفي الاغتراب.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>التواصل</h3>
+            <p>ربط السوريين والمجتمعات والداعمين والمبادرات والمنظمات الراغبة في المساهمة في مستقبل أفضل.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="language-section english-section" aria-label="رسالتنا">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">رسالتنا</p>
+          <h2>صون الحقيقة والكرامة والذاكرة والمشاركة في مستقبل سوريا.</h2>
+          <p>نؤمن بأن سوريا ملك لجميع أبنائها، وأن من حق كل سوري أن يعيش بكرامة ويتمتع بحقوقه الفردية ويشارك بحرية في رسم مستقبل البلاد.</p>
+          <p>رسالتنا هي حفظ الأصوات السورية والذاكرة التاريخية، وتشجيع الفهم العام الدقيق، والدفاع عن كرامة الإنسان، والحفاظ على روابط حقيقية بين السوريين داخل البلاد وفي مختلف أنحاء الاغتراب.</p>
+          <p>نسعى إلى تذكّر ما حدث، وتوثيق ما يستحق أن يبقى، ودعم الحوار البنّاء، والمساهمة في مستقبل يقوم على الحرية والعدالة والتنوع والمسؤولية.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="syria" class="language-section arabic-section" aria-label="سوريا">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">سوريا</p>
+          <h2>بلد عريق، متنوع المجتمعات، ومستقبله ما زال يُكتب.</h2>
+          <p>سوريا أكبر من الصراعات التي تصدرت العناوين في السنوات الأخيرة. فهي بلد شكّلته حضارات قديمة ومدن تاريخية وتقاليد غنية ومجتمعات متعددة وأجيال من السوريين تمتد حياتهم وقصصهم إلى ما هو أبعد من السياسة والحرب.</p>
+          <p>سيكون هذا القسم دليلاً حيّاً إلى سوريا: تاريخها ومدنها وثقافتها وشعبها وتجربتها الحديثة والتهجير والاغتراب والأفكار التي تشكل مستقبلها.</p>
+          <p>هدفنا مساعدة السوريين وغير السوريين على فهم البلاد بعمقها الكامل، مع تذكّر ما فُقد، والحفاظ على ما بقي، والنظر إلى ما يمكن بناؤه من جديد.</p>
+
+          <div class="places-block" aria-label="اكتشف سوريا">
+            <h3 class="places-heading">اكتشف سوريا</h3>
+            <div class="places-grid">
+              <a class="place-card place-card-link" href="damascus.html" aria-label="اكتشف دمشق">
+                <h3>دمشق</h3>
+                <p>عاصمة سوريا وإحدى أقدم المدن المأهولة باستمرار في العالم، شكلتها قرون من التاريخ والدين والتجارة والعمارة والثقافة.</p>
+              </a>
+              <a class="place-card place-card-link" href="homs.html" aria-label="اكتشف حمص">
+                <h3>حمص</h3>
+                <p>مدينة كبرى في وسط سوريا ذات جذور تاريخية عميقة ومكانة مهمة في القصة الاجتماعية والثقافية والحديثة للبلاد.</p>
+              </a>
+              <a class="place-card place-card-link" href="hama.html" aria-label="اكتشف حماة">
+                <h3>حماة</h3>
+                <p>مدينة تاريخية على نهر العاصي، تشتهر بنواعيرها الخشبية الكبيرة وتراثها الثقافي المميز.</p>
+              </a>
+              <a class="place-card place-card-link" href="aleppo.html" aria-label="اكتشف حلب">
+                <h3>حلب</h3>
+                <p>مدينة شمالية عريقة شكلتها التجارة وتنوع المجتمعات والأسواق التاريخية وقلعتها الشهيرة في قلب المدينة القديمة.</p>
+              </a>
+              <a class="place-card place-card-link" href="idlib.html" aria-label="اكتشف إدلب">
+                <h3>إدلب</h3>
+                <p>منطقة في شمال غرب سوريا معروفة ببلداتها وريفها وبساتين الزيتون وتراثها الأثري ومجتمعاتها التي تستحق قصصها أن تُحفظ.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modern-history" class="language-section english-section" aria-label="التاريخ السوري الحديث">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">التاريخ السوري الحديث</p>
+          <h2>من حكم عائلة الأسد إلى الثورة، ثم 8 كانون الأول والمرحلة الانتقالية.</h2>
+          <p>يمكن فهم تاريخ سوريا الحديث من خلال عدد من المراحل الرئيسية. يوضح هذا الخط الزمني التسلسل الأساسي قبل أن نوسّع كل مرحلة بالوثائق والصور والشهادات والمصادر.</p>
+
+          <div class="history-timeline" aria-label="الخط الزمني للتاريخ السوري الحديث">
+            <article class="history-step">
+              <span class="history-date">1970–2000</span>
+              <h3>حافظ الأسد</h3>
+              <p>تولى حافظ الأسد السلطة عام 1970 وحكم سوريا حتى وفاته عام 2000، وأقام نظاماً سياسياً وأمنياً شديد المركزية.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2000–2011</span>
+              <h3>بشار الأسد</h3>
+              <p>خلف بشار الأسد والده عام 2000. وتراجعت توقعات الانفتاح السياسي مع استمرار هيمنة الحكم المركزي والأجهزة الأمنية النافذة.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2011–2024</span>
+              <h3>الانتفاضة والحرب والتهجير</h3>
+              <p>انتشرت في سوريا عام 2011 احتجاجات تطالب بالتغيير السياسي، وقوبلت بالاعتقالات والعنف من الأجهزة الأمنية. ثم تطورت الانتفاضة إلى حرب مدمرة شاركت فيها أطراف سورية وقوى خارجية، وأدت إلى مقتل مئات الآلاف وتهجير الملايين.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">8 كانون الأول 2024</span>
+              <h3>سقوط حكومة الأسد</h3>
+              <p>دخلت قوات المعارضة دمشق وغادر بشار الأسد سوريا، منهية أكثر من خمسة عقود من حكم عائلة الأسد. وبالنسبة إلى كثير من السوريين الذين عارضوا الحكومة، أصبح 8 كانون الأول رمزاً للتحرير بعد سنوات من الثورة والسجن والتهجير والخسارة.</p>
+            </article>
+
+            <article class="history-step">
+              <span class="history-date">2024–الحاضر</span>
+              <h3>المرحلة الانتقالية وإعادة البناء</h3>
+              <p>في عهد الرئيس أحمد الشرع، تعمل سوريا على إعادة بناء مؤسساتها وعلاقاتها الدولية، مع مواجهة قضايا الأمن والمساءلة والمفقودين والنازحين وإعادة الإعمار والوحدة الوطنية ومستقبل البلاد السياسي.</p>
+            </article>
+          </div>
+
+          <p>سيتوسع هذا القسم زمنياً ومع إضافة المصادر، بحيث يستطيع الزائر التمييز بين التاريخ الموثق والشهادات والتفسيرات والتطورات المستمرة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="language-section arabic-section" aria-label="قصص سورية">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">قصص سورية</p>
+          <h2>شارك قصة لا ينبغي أن تضيع.</h2>
+          <p>ترحب أحرار سوريا بالذكريات الشخصية وشهادات العيان والتاريخ العائلي والصور والتأملات وتجارب السوريين داخل سوريا وفي مختلف أنحاء الاغتراب.</p>
+
+          <div class="places-block" aria-label="شارك قصة سورية">
+            <div class="places-grid">
+              <div class="place-card">
+                <h3>ماذا تشارك؟</h3>
+                <p>ذكرى عن مدينة أو حي، تجربة عائلية، قصة نزوح أو عودة، محطة شخصية مهمة، حياة مجتمعية، تقاليد ثقافية، أو أي جزء آخر من التاريخ السوري المعاش.</p>
+              </div>
+              <div class="place-card">
+                <h3>ماذا يمكنك أن ترسل؟</h3>
+                <p>قصصاً مكتوبة، صوراً، وثائق ممسوحة ضوئياً، تعليقات توضيحية، إشارات إلى تسجيلات صوتية أو فيديو، ومعلومات تساعد على حفظ السياق.</p>
+              </div>
+              <div class="place-card">
+                <h3>هويتك</h3>
+                <p>أخبرنا إن كنت تريد إظهار اسمك، أو تفضّل تعريفا محدوداً، أو ترغب في النظر في نشر مساهمتك دون كشف هويتك.</p>
+              </div>
+              <div class="place-card">
+                <h3>قبل النشر</h3>
+                <p>قد تُحرر المشاركات لتحسين الوضوح والسياق، وستراجع أحرار سوريا المواد قبل اتخاذ قرار بشأن ملاءمتها للنشر.</p>
+              </div>
+            </div>
+          </div>
+
+          <p>أرسل قصتك أو فكرتك إلى <a href="mailto:info@freesyrians.ca?subject=Syrian%20Story%20Submission">info@freesyrians.ca</a>.</p>
+        </div>
+        <a class="section-button" href="mailto:info@freesyrians.ca?subject=Syrian%20Story%20Submission">شارك قصتك</a>
+      </div>
+    </section>
+
+    <section id="events" class="language-section english-section" aria-label="الفعاليات">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">الفعالية القادمة</p>
+          <h2>احتفال التحرير السوري</h2>
+          <p><strong>6 كانون الأول 2026 · مساءً</strong></p>
+          <p>تستعد أحرار سوريا لتنظيم احتفال مجتمعي قبيل يوم التحرير السوري في 8 كانون الأول. وتهدف الأمسية إلى جمع السوريين وأصدقاء سوريا لإحياء المناسبة والاحتفاء بالمجتمع والتطلع إلى مستقبل سوريا.</p>
+
+          <div class="places-block" aria-label="تفاصيل احتفال التحرير السوري">
+            <div class="places-grid">
+              <div class="place-card">
+                <h3>البرنامج</h3>
+                <p>من المخطط أن تتضمن الأمسية أداءً غنائياً حياً وموسيقى وتكريماً مجتمعياً وفرصة لمشاركة الضيوف والداعمين.</p>
+              </div>
+              <div class="place-card">
+                <h3>الضيافة</h3>
+                <p>من المخطط تقديم مأكولات خفيفة ومشروبات للضيوف خلال الأمسية.</p>
+              </div>
+              <div class="place-card">
+                <h3>المكان</h3>
+                <p>سيتم الإعلان عن مكان الفعالية والتفاصيل النهائية بعد تأكيدها.</p>
+              </div>
+              <div class="place-card">
+                <h3>المشاركة والرعاية</h3>
+                <p>للاستفسار عن المشاركة أو الرعاية، تواصل معنا عبر <a href="mailto:info@freesyrians.ca">info@freesyrians.ca</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media-watch" class="language-section arabic-section" aria-label="رصد الإعلام">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">رصد الإعلام</p>
+          <h2>الدقة مهمة، والتصحيح ينبغي أن يكون بنّاءً.</h2>
+          <p>ترصد أحرار سوريا التقارير العامة والعناوين والمنشورات على وسائل التواصل والادعاءات المتعلقة بسوريا عندما تبدو المعلومات غير دقيقة أو مضللة أو ناقصة أو غير مدعومة أو بحاجة إلى سياق إضافي.</p>
+          <p>يقوم نهجنا على التحقق من المادة الأصلية وحفظ الأدلة ذات الصلة والتواصل المهني مع الجهة الناشرة أو المنصة عندما تكون هناك حاجة إلى تصحيح أو توضيح.</p>
+          <p>عندما تتجاوب الجهة الناشرة بشكل بنّاء أو تصحح المشكلة، تكون أولويتنا حل المسألة لا التشهير بالمؤسسة أو إحراجها علناً. ولذلك تبقى المراسلات وسجلات الحالات الفردية خاصة في العادة.</p>
+          <p>إذا بقيت مشكلة جدية دون حل، فقد تُرفع عبر إجراءات الشكوى المعتمدة لدى الناشر أو الهيئات المهنية أو القنوات التنظيمية القانونية المناسبة. ولا نعتبر النقد معلومات مضللة لمجرد أننا نختلف معه.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="language-section english-section" aria-label="الموارد">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">موارد</p>
+          <h2>نقاط بداية موثوقة حول سوريا.</h2>
+          <p>توجّه هذه المجموعة الزوار إلى جهات معروفة تعمل في مجالات الدعم الإنساني والنزوح والتوثيق والمساءلة والحفاظ على التراث الثقافي السوري.</p>
+
+          <div class="places-block" aria-label="موارد حول سوريا">
+            <div class="places-grid">
+              <a class="place-card place-card-link" href="https://help.unhcr.org/syria/" target="_blank" rel="noopener noreferrer">
+                <h3>مساعدة المفوضية في سوريا</h3>
+                <p>معلومات عملية للسوريين العائدين إلى بلادهم والنازحين داخل سوريا واللاجئين وطالبي اللجوء والباحثين عن خدمات المفوضية.</p>
+              </a>
+              <a class="place-card place-card-link" href="https://www.icrc.org/en/where-we-work/syria" target="_blank" rel="noopener noreferrer">
+                <h3>اللجنة الدولية للصليب الأحمر في سوريا</h3>
+                <p>معلومات إنسانية عن المساعدات والمفقودين والروابط العائلية والصحة والحماية وآثار النزاع على المجتمعات السورية.</p>
+              </a>
+              <a class="place-card place-card-link" href="https://iiim.un.org/" target="_blank" rel="noopener noreferrer">
+                <h3>الآلية الدولية المحايدة والمستقلة للأمم المتحدة</h3>
+                <p>آلية أممية تجمع الأدلة المتعلقة بأخطر الجرائم الدولية المرتكبة في سوريا منذ عام 2011 وتحفظها وتحللها.</p>
+              </a>
+              <a class="place-card place-card-link" href="https://whc.unesco.org/en/statesparties/sy" target="_blank" rel="noopener noreferrer">
+                <h3>اليونسكو — التراث السوري</h3>
+                <p>معلومات عن مواقع التراث العالمي في سوريا، ومنها دمشق وحلب وتدمر وبصرى والقرى الأثرية في شمال سوريا وقلعة الحصن.</p>
+              </a>
+            </div>
+          </div>
+
+          <p>هذه موارد خارجية مستقلة. إدراجها هنا لا يعني أن أحرار سوريا تؤيد كل تصريح أو موقف تنشره هذه الجهات.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="language-section arabic-section" aria-label="تواصل مع أحرار سوريا">
+      <div class="section-shell language-section-inner">
+        <div>
+          <p class="section-label">تواصل معنا</p>
+          <h2>تواصل مع أحرار سوريا.</h2>
+          <p>تواصل معنا لمشاركة قصة أو فعالية، أو اقتراح مورد، أو الإبلاغ عن تغطية إعلامية غير دقيقة، أو تقديم تصحيح، أو مناقشة تعاون مجتمعي.</p>
+          <p>البريد الإلكتروني: <a href="mailto:info@freesyrians.ca">info@freesyrians.ca</a></p>
+        </div>
+        <a class="section-button" href="mailto:info@freesyrians.ca">راسل أحرار سوريا</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-inner">
+      <div>
+        <strong>FREE SYRIANS</strong>
+        <span>أحرار سوريا</span>
+      </div>
+      <p>FreeSyrians.ca · <a href="privacy.html">الخصوصية</a> · <a href="terms.html">الشروط / إخلاء المسؤولية</a></p>
+    </div>
+  </footer>
+
+  <script src="mobile-nav-ar.js?v=1" defer></script>
+</body>
+</html>

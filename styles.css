@@ -305,6 +305,11 @@ a { color: inherit; }
 
 [dir="rtl"] .main-nav a::after { transform-origin: right; }
 [dir="rtl"] .footer-inner p::before { content: "© 2026 أحرار سوريا · "; }
+[dir="rtl"] .intro-copy h2,
+[dir="rtl"] .language-section h2,
+[dir="rtl"] .places-heading,
+[dir="rtl"] .section-label { letter-spacing: 0; }
+[dir="rtl"] .section-label { text-transform: none; }
 
 @media (max-width: 980px) {
   .intro-grid { grid-template-columns: 1fr; gap: 44px; }

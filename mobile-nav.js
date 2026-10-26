@@ -232,3 +232,17 @@
   `;
   actions.appendChild(languageSwitch);
 })();
+
+(() => {
+  if (document.documentElement.lang !== 'ar') return;
+
+  document.querySelectorAll('footer a[href="privacy.html"]').forEach((link) => {
+    link.href = 'privacy-ar.html';
+    link.textContent = 'الخصوصية';
+  });
+
+  document.querySelectorAll('footer a[href="terms.html"]').forEach((link) => {
+    link.href = 'terms-ar.html';
+    link.textContent = 'الشروط / إخلاء المسؤولية';
+  });
+})();

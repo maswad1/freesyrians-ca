@@ -9,190 +9,56 @@
   <link rel="stylesheet" href="styles.css?v=26">
   <link rel="stylesheet" href="mobile-nav.css?v=2">
   <style>
-    .city-page {
-      min-height: calc(100vh - 78px);
-      padding: 86px 0 110px;
-      background: #f7f8f6;
-    }
-    .city-hero {
-      max-width: 900px;
-      margin-bottom: 46px;
-    }
-    .city-hero h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.95;
-      letter-spacing: -0.055em;
-    }
-    .city-hero .city-ar {
-      margin: 12px 0 0;
-      color: var(--green);
-      font-size: 1.35rem;
-      font-weight: 750;
-    }
-    .city-hero > p:last-child {
-      max-width: 760px;
-      margin: 26px 0 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .city-gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-      margin: 0 0 24px;
-    }
-    .city-gallery figure {
-      margin: 0;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--white);
-    }
-    .city-gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .city-gallery figcaption {
-      padding: 12px 16px 14px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-    .city-gallery figcaption a {
-      color: inherit;
-    }
-    .city-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      max-width: 1000px;
-    }
-    .city-card {
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: var(--white);
-    }
-    .city-card h2 {
-      margin: 0 0 12px;
-      font-size: 1.55rem;
-      letter-spacing: -0.025em;
-    }
-    .city-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-    .city-back {
-      display: inline-flex;
-      margin-top: 38px;
-      font-weight: 750;
-      color: var(--deep-green);
-      text-decoration: none;
-    }
-    @media (max-width: 760px) {
-      .city-page { padding: 54px 0 80px; }
-      .city-gallery,
-      .city-grid { grid-template-columns: 1fr; }
-      .city-card { padding: 24px; }
-    }
+    .city-page { min-height: calc(100vh - 78px); padding: 86px 0 110px; background: #f7f8f6; }
+    .city-hero { max-width: 900px; margin-bottom: 46px; }
+    .city-hero h1 { margin: 0; font-size: clamp(3rem, 7vw, 6rem); line-height: .95; letter-spacing: -.055em; }
+    .city-hero .city-ar { margin: 12px 0 0; color: var(--green); font-size: 1.35rem; font-weight: 750; }
+    .city-hero > p:last-child { max-width: 760px; margin: 26px 0 0; color: var(--muted); font-size: 1.08rem; }
+    .city-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; margin: 0 0 24px; }
+    .city-gallery figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-gallery img { width: 100%; height: auto; display: block; }
+    .city-gallery figcaption { padding: 12px 16px 14px; color: var(--muted); font-size: .9rem; }
+    .city-gallery figcaption a { color: inherit; }
+    .city-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; max-width: 1000px; }
+    .city-card { padding: 30px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .city-card h2 { margin: 0 0 12px; font-size: 1.55rem; letter-spacing: -.025em; }
+    .city-card p { margin: 0; color: var(--muted); }
+    .city-back { display: inline-flex; margin-top: 38px; font-weight: 750; color: var(--deep-green); text-decoration: none; }
+    @media (max-width: 760px) { .city-page { padding: 54px 0 80px; } .city-gallery, .city-grid { grid-template-columns: 1fr; } .city-card { padding: 24px; } }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="index.html" aria-label="Free Syrians home">
-        <span class="brand-copy">
-          <strong>FREE SYRIANS</strong>
-          <small lang="ar" dir="rtl">أحرار سوريا</small>
-        </span>
-      </a>
-
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu">
-        <span class="menu-toggle-line" aria-hidden="true"></span>
-        <span class="menu-toggle-line" aria-hidden="true"></span>
-        <span class="menu-toggle-line" aria-hidden="true"></span>
-      </button>
-
+      <a class="brand" href="index.html" aria-label="Free Syrians home"><span class="brand-copy"><strong>FREE SYRIANS</strong><small lang="ar" dir="rtl">أحرار سوريا</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation menu"><span class="menu-toggle-line" aria-hidden="true"></span><span class="menu-toggle-line" aria-hidden="true"></span><span class="menu-toggle-line" aria-hidden="true"></span></button>
       <div class="nav-actions" id="mobile-navigation">
         <nav class="main-nav" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#mission">Our Mission</a>
-          <a href="index.html#syria" aria-current="page">Syria</a>
-          <a href="index.html#stories">Stories</a>
-          <a href="index.html#events">Events</a>
-          <a href="index.html#projects">Projects</a>
-          <a href="index.html#resources">Resources</a>
-          <a href="index.html#contact">Contact</a>
+          <a href="index.html">Home</a><a href="index.html#about">About</a><a href="index.html#mission">Our Mission</a><a href="index.html#syria" aria-current="page">Syria</a><a href="index.html#modern-history">Modern History</a><a href="index.html#stories">Stories</a><a href="index.html#events">Events</a><a href="index.html#media-watch">Media Watch</a><a href="index.html#resources">Resources</a><a href="index.html#contact">Contact</a>
         </nav>
-
-        <div class="language-switch" aria-label="Language selection">
-          <a href="index.html#english" lang="en">EN</a>
-          <span class="language-divider" aria-hidden="true">|</span>
-          <a href="index.html#arabic" lang="ar" dir="rtl">العربية</a>
-        </div>
+        <div class="language-switch" aria-label="Language selection"><a href="damascus.html" lang="en" aria-current="page">EN</a><span class="language-divider" aria-hidden="true">|</span><a href="damascus-ar.html" lang="ar" dir="rtl">العربية</a></div>
       </div>
     </div>
   </header>
 
   <main class="city-page">
     <div class="section-shell">
-      <section class="city-hero" aria-labelledby="damascus-title">
-        <p class="section-label">EXPLORE SYRIA</p>
-        <h1 id="damascus-title">Damascus</h1>
-        <p class="city-ar" lang="ar" dir="rtl">دمشق</p>
-        <p>Damascus is Syria’s capital and one of the great historic cities of the region. Its identity has been shaped by ancient trade routes, faith, scholarship, craftsmanship, architecture, family life, and generations of people who made the city their home.</p>
-      </section>
-
+      <section class="city-hero" aria-labelledby="damascus-title"><p class="section-label">EXPLORE SYRIA</p><h1 id="damascus-title">Damascus</h1><p class="city-ar" lang="ar" dir="rtl">دمشق</p><p>Damascus is Syria’s capital and one of the great historic cities of the region. Its identity has been shaped by ancient trade routes, faith, scholarship, craftsmanship, architecture, family life, and generations of people who made the city their home.</p></section>
       <div class="city-gallery" aria-label="Damascus photographs">
-        <figure>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Damascus%2C_Syria%2C_The_Old_City_of_Damascus.jpg" alt="Street in the Old City of Damascus" loading="lazy">
-          <figcaption>Old Damascus · Photo: Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Damascus,_Syria,_The_Old_City_of_Damascus.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY 4.0)</figcaption>
-        </figure>
-        <figure>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Qasiyon_Damascus.JPG" alt="Mount Qasioun overlooking Damascus" loading="lazy">
-          <figcaption>Mount Qasioun overlooking Damascus · Photo: Aziz1005, <a href="https://commons.wikimedia.org/wiki/File:Qasiyon_Damascus.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (Public Domain)</figcaption>
-        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Damascus%2C_Syria%2C_The_Old_City_of_Damascus.jpg" alt="Street in the Old City of Damascus" loading="lazy"><figcaption>Old Damascus · Photo: Vyacheslav Argenberg, <a href="https://commons.wikimedia.org/wiki/File:Damascus,_Syria,_The_Old_City_of_Damascus.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (CC BY 4.0)</figcaption></figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Qasiyon_Damascus.JPG" alt="Mount Qasioun overlooking Damascus" loading="lazy"><figcaption>Mount Qasioun overlooking Damascus · Photo: Aziz1005, <a href="https://commons.wikimedia.org/wiki/File:Qasiyon_Damascus.JPG" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a> (Public Domain)</figcaption></figure>
       </div>
-
       <div class="city-grid">
-        <article class="city-card">
-          <h2>Old Damascus</h2>
-          <p>The historic heart of the city is known for its narrow lanes, traditional courtyard houses, markets, places of worship, and layers of architecture from many periods. Landmarks such as the Umayyad Mosque, Straight Street, and the old souqs reflect the city’s long and complex history.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Mount Qasioun</h2>
-          <p>Qasioun rises above Damascus and has long been part of the city’s visual identity. From its slopes, the city spreads across the plain below, making the mountain a familiar symbol of Damascus for residents, visitors, and Syrians abroad.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Living Heritage</h2>
-          <p>Damascus is not only a collection of monuments. Its culture lives through food, music, crafts, family traditions, neighborhoods, gardens, cafés, markets, and the everyday memories of the people who have lived there across generations.</p>
-        </article>
-
-        <article class="city-card">
-          <h2>Modern Damascus</h2>
-          <p>Beyond the Old City, Damascus is a modern capital made up of many districts and communities. Its contemporary story includes education, business, art, migration, social change, hardship, resilience, and the continuing relationship between Syrians and their capital.</p>
-        </article>
+        <article class="city-card"><h2>Old Damascus</h2><p>The historic heart of the city is known for its narrow lanes, traditional courtyard houses, markets, places of worship, and layers of architecture from many periods. Landmarks such as the Umayyad Mosque, Straight Street, and the old souqs reflect the city’s long and complex history.</p></article>
+        <article class="city-card"><h2>Mount Qasioun</h2><p>Qasioun rises above Damascus and has long been part of the city’s visual identity. From its slopes, the city spreads across the plain below, making the mountain a familiar symbol of Damascus for residents, visitors, and Syrians abroad.</p></article>
+        <article class="city-card"><h2>Living Heritage</h2><p>Damascus is not only a collection of monuments. Its culture lives through food, music, crafts, family traditions, neighborhoods, gardens, cafés, markets, and the everyday memories of the people who have lived there across generations.</p></article>
+        <article class="city-card"><h2>Modern Damascus</h2><p>Beyond the Old City, Damascus is a modern capital made up of many districts and communities. Its contemporary story includes education, business, art, migration, social change, hardship, resilience, and the continuing relationship between Syrians and their capital.</p></article>
       </div>
-
       <a class="city-back" href="index.html#syria">← Back to Syria</a>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="section-shell footer-inner">
-      <div>
-        <strong>FREE SYRIANS</strong>
-        <span lang="ar" dir="rtl">أحرار سوريا</span>
-      </div>
-      <p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p>
-    </div>
-  </footer>
-
+  <footer class="site-footer"><div class="section-shell footer-inner"><div><strong>FREE SYRIANS</strong><span lang="ar" dir="rtl">أحرار سوريا</span></div><p>FreeSyrians.ca · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms / Disclaimer</a></p></div></footer>
   <script src="mobile-nav.js?v=1" defer></script>
 </body>
 </html>

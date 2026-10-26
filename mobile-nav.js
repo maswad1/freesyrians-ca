@@ -172,3 +172,20 @@
     inner.appendChild(storyButton);
   }
 })();
+
+(() => {
+  const inner = document.querySelector('#media-watch .language-section-inner');
+  if (!inner) return;
+
+  const copy = inner.querySelector('div');
+  if (!copy) return;
+
+  copy.innerHTML = `
+    <p class="section-label">MEDIA WATCH</p>
+    <h2>Accuracy matters. Corrections should be constructive.</h2>
+    <p>Free Syrians monitors public reports, headlines, social-media posts, and allegations about Syria when information appears inaccurate, misleading, incomplete, unsupported, or in need of additional context.</p>
+    <p>Our approach is to verify the original material, preserve the relevant evidence, and contact the publisher or platform professionally when a correction or clarification may be needed.</p>
+    <p>When an outlet responds constructively or corrects the issue, our priority is resolving the problem rather than publicly naming or embarrassing the organization. Individual correspondence and case records are therefore generally kept private.</p>
+    <p>If a serious issue remains unresolved, concerns may be raised through appropriate publisher complaint procedures, professional bodies, or lawful regulatory channels. Criticism is not treated as misinformation simply because Free Syrians disagrees with it.</p>
+  `;
+})();

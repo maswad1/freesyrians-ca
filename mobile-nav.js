@@ -217,3 +217,18 @@
     <p>We aim to remember what happened, document what matters, support constructive dialogue, and contribute to a future built on freedom, justice, diversity, and responsibility.</p>
   `;
 })();
+
+(() => {
+  const actions = document.querySelector('#mobile-navigation');
+  if (!actions || actions.querySelector('.language-switch')) return;
+
+  const languageSwitch = document.createElement('div');
+  languageSwitch.className = 'language-switch';
+  languageSwitch.setAttribute('aria-label', 'Language selection');
+  languageSwitch.innerHTML = `
+    <a href="index.html" lang="en" aria-current="page">EN</a>
+    <span class="language-divider" aria-hidden="true">|</span>
+    <a href="index-ar.html" lang="ar" dir="rtl">العربية</a>
+  `;
+  actions.appendChild(languageSwitch);
+})();

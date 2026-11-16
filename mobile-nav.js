@@ -113,7 +113,7 @@
         </div>
         <div class="place-card">
           <h3>Hospitality</h3>
-          <p>Finger food and drinks are planned for guests during the evening.</p>
+          <p>Shawarma and sweets are included with admission.</p>
         </div>
         <div class="place-card">
           <h3>Venue</h3>

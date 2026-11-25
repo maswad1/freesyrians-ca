@@ -138,3 +138,13 @@ body.event-site{direction:rtl;text-align:right;font-family:"Segoe UI",Tahoma,Ari
 .event-supporter-map{display:inline-block;font-weight:700;text-decoration:none;color:#13734e;margin-top:5px}
 .event-supporter-map:hover{text-decoration:underline}
 @media(max-width:600px){.event-supporter-card{flex-direction:column;align-items:stretch;gap:12px}.event-supporter-logo{width:100%;max-width:320px;align-self:center}.event-nonprofit{font-size:.82rem!important}}
+
+.event-song-intro{max-width:920px;color:#5b7061}
+.event-song-panel h3{margin:16px 0;color:#13563e}
+.event-song-list{list-style:none;margin:0 0 28px;padding:0}
+.song-line{display:grid;grid-template-columns:82px minmax(0,1fr) auto;gap:12px;align-items:start;padding:11px;border-bottom:1px solid #e5ede7}
+.song-line.break{background:#e8f1fc}.song-line.speech{background:#fff8dc}.song-line.special{background:#eff7eb}
+.song-kind{color:#0c6849;background:#e8f2ea;border-radius:6px;text-align:center;font-size:.83rem;font-weight:750;padding:4px 6px}
+.song-name{color:#233b2f}.song-name small{font-size:.85rem;color:#607166;display:inline}.song-name small:has(+small){display:block}
+.song-aux{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.song-aux small{color:#64746a}.song-aux a{color:#106343;text-decoration:underline;font-size:.85rem}
+@media(max-width:640px){.song-line{grid-template-columns:70px 1fr}.song-aux{grid-column:2}}

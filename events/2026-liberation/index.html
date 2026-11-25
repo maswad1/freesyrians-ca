@@ -248,6 +248,7 @@
             <p class="event-form-privacy">نستخدم بياناتك للتواصل بشأن الفعاليات والعروض التي وافقت على تلقيها، ولن ننشر معلوماتك على الموقع. يمكن طلب إزالة بياناتك عبر <a href="mailto:info@freesyrians.ca">info@freesyrians.ca</a>.</p>
             <div class="event-form-footer">
               <button class="event-button event-form-submit" type="submit">إرسال التسجيل</button>
+              <span class="event-form-status" id="event-form-status" role="status" aria-live="polite" hidden style="font-weight:700;line-height:1.6"></span>
               <small>الحقول المميزة بعلامة * إلزامية.</small>
             </div>
           </form>
@@ -258,6 +259,9 @@
           var input = document.getElementById('discount-date');
           var hidden = document.getElementById('discount-submission-date');
           var form = document.querySelector('.event-discount-form');
+          var status = document.getElementById('event-form-status');
+          var button = form.querySelector('button[type="submit"]');
+          var originalButtonText = button.textContent;
           function stamp() {
             var date = new Date();
             var year = date.getFullYear();
@@ -270,8 +274,51 @@
             input.value = value;
             hidden.value = value;
           }
+          function message(text, error) {
+            status.hidden = false;
+            status.textContent = text;
+            status.style.color = error ? '#a51c30' : '#106944';
+          }
+          function restore() {
+            button.disabled = false;
+            button.textContent = originalButtonText;
+          }
           stamp();
-          form.addEventListener('submit', stamp);
+          form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            if (!form.reportValidity()) {
+              message('يرجى إدخال بريد إلكتروني صحيح والموافقة على استقبال رسائل الفعاليات.', true);
+              return;
+            }
+            stamp();
+            button.disabled = true;
+            button.textContent = 'جارٍ إرسال التسجيل…';
+            message('جارٍ إرسال بياناتك. يرجى عدم إغلاق الصفحة.', false);
+            try {
+              var fields = new FormData(form);
+              var payload = {};
+              fields.forEach(function (value, key) {
+                if (key !== '_honey' && key !== '_next') payload[key] = value;
+              });
+              var response = await fetch('https://formsubmit.co/ajax/info@freesyrians.ca', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                body: JSON.stringify(payload)
+              });
+              var result = await response.json();
+              var success = result && (result.success === true || result.success === 'true');
+              if (!response.ok || !success) {
+                throw new Error((result && (result.message || result.error)) || 'Unable to submit');
+              }
+              window.location.assign('/events/2026-liberation/thank-you/?received=1');
+            } catch (error) {
+              message('لم نتمكن من تأكيد استلام التسجيل. يرجى المحاولة مجدداً. إذا استمرت المشكلة راسلنا على info@freesyrians.ca.', true);
+              restore();
+            }
+          });
+          form.addEventListener('invalid', function () {
+            message('يرجى إدخال البريد الإلكتروني والموافقة على استقبال رسائل الفعاليات قبل الإرسال.', true);
+          }, true);
         }());
       </script>
       <div class="event-buttons"><a class="event-button secondary" href="../">العودة إلى جميع الفعاليات</a></div>

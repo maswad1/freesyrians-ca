@@ -210,3 +210,22 @@ body.event-site{direction:rtl;text-align:right;font-family:"Segoe UI",Tahoma,Ari
 .event-song-details .event-song-intro{font-size:.87rem}
 @media(max-width:830px){.event-essentials{grid-template-columns:1fr 1fr}.event-essential-item:last-child{grid-column:1/-1}}
 @media(max-width:620px){.event-hero-compact{padding:22px 0!important}.event-hero-compact-inner img{width:65px;height:65px}.event-hero-compact h1{font-size:1.6rem!important}.event-compact-date{font-size:.92rem}.event-hero-compact .event-eyebrow{font-size:.77rem}.event-essentials{grid-template-columns:1fr;gap:7px}.event-essential-item:last-child{grid-column:auto}.event-essential-item{padding:10px 13px}.event-main-compact .event-agenda-main li{grid-template-columns:110px minmax(0,1fr);gap:8px;padding:10px 2px}.event-main-compact .event-agenda-main .time{white-space:normal;text-align:center;font-size:.77rem}.event-main-compact .event-schedule-panel{padding:4px 10px}.event-main-compact .event-agenda-main .desc strong{font-size:.9rem}.event-main-compact .event-agenda-main .desc small{font-size:.77rem}.event-song-details summary{display:block}.event-song-details summary small{display:block;margin-top:3px}.event-song-details summary:after{position:absolute;left:20px;top:10px}.event-song-details summary{position:relative;padding-left:45px}}
+
+/* Full sheet-led show rundown: never hide titles behind a disclosure */
+.event-song-visible{padding:0}
+.event-song-visible .event-song-main-heading{background:linear-gradient(115deg,#0d4254,#0f6448);border-radius:17px;padding:19px 23px;margin-bottom:13px;color:#fff}
+.event-song-visible .event-song-main-heading h2{color:#fff;font-size:clamp(1.5rem,3vw,2rem);margin:4px 0 5px}
+.event-song-visible .event-song-main-heading p{color:#e5f0e8;margin:0;line-height:1.6}
+.event-song-visible .event-song-main-heading .event-song-kicker{color:#e9c77d;font-weight:850;font-size:.86rem}
+.event-song-visible .event-song-panel{padding:8px 18px 15px;border:1px solid #d6e3d9;box-shadow:0 6px 20px #0c49390b}
+.event-song-visible .event-song-panel h3{background:#e6f2e8;color:#11563a;border-radius:9px;padding:11px 15px;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:1.16rem}
+.event-song-visible .event-song-panel h3 span{font-size:.79rem;color:#315f4a;white-space:nowrap}
+.event-song-visible .song-line{padding:10px 12px;grid-template-columns:90px minmax(0,1fr) auto;gap:14px}
+.event-song-visible .song-line:nth-child(even):not(.break):not(.speech):not(.special){background:#f7faf8}
+.event-song-visible .song-name strong{font-size:1.03rem}
+.event-song-visible .song-line.break{border-inline-start:5px solid #4577c4}
+.event-song-visible .song-line.speech{border-inline-start:5px solid #d1aa43}
+.event-song-visible .song-line.special{border-inline-start:5px solid #219363}
+.event-song-visible .event-song-intro{margin:0 0 12px}
+.event-main-compact #songs{margin-bottom:25px}
+@media(max-width:640px){.event-song-visible .event-song-panel{padding:7px}.event-song-visible .event-song-panel h3{display:block;font-size:1.02rem}.event-song-visible .event-song-panel h3 span{display:block;margin-top:4px}.event-song-visible .song-line{grid-template-columns:70px minmax(0,1fr);gap:9px;padding:9px 6px}.event-song-visible .song-name strong{font-size:.95rem}.event-song-visible .event-song-main-heading{padding:17px}}

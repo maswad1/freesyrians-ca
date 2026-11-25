@@ -16,7 +16,7 @@
   <title>احتفال بذكرى تحرير سوريا ٢٠٢٦ | أحرار سوريا</title>
   <link rel="canonical" href="https://freesyrians.ca/events/2026-liberation/">
   <link rel="stylesheet" href="../../styles.css?v=26">
-  <link rel="stylesheet" href="../event.css?v=5">
+  <link rel="stylesheet" href="../event.css?v=6">
   <script type="application/ld+json">
   {
     "@context":"https://schema.org","@type":"Event",
@@ -45,7 +45,7 @@
   <header class="event-nav">
     <div class="event-nav-inner">
       <a class="event-logo" href="../../index-ar.html"><strong>FREE SYRIANS</strong><small>أحرار سوريا</small></a>
-      <nav class="event-links" aria-label="التنقل"><a href="#program">برنامج الحفل</a><a href="#songs">الأغاني</a><a href="#reservations">الحجز</a><a href="../">جميع الفعاليات</a></nav>
+      <nav class="event-links" aria-label="التنقل"><a href="#program">برنامج الحفل</a><a href="#songs">الأغاني</a><a href="#discount-registration">خصم ١٥٪</a><a href="#reservations">الحجز</a><a href="../">جميع الفعاليات</a></nav>
     </div>
   </header>
   <main>
@@ -199,6 +199,79 @@
             </div>
           </article>
       </section>
+      <section class="event-section event-discount-section" id="discount-registration" aria-label="التسجيل للحصول على خصم الفعاليات القادمة">
+        <div class="event-discount-heading">
+          <span class="event-discount-offer">خصم ١٥٪</span>
+          <h2>سجّل الآن واحصل على خصم ١٥٪ في فعالياتنا القادمة</h2>
+          <p>اترك بريدك الإلكتروني لتصلك أخبار فعاليات أحرار سوريا المقبلة وعروض الخصم. تعبئة النموذج لا تُعد حجزاً لفعالية ٦ ديسمبر.</p>
+        </div>
+        <div class="event-panel event-discount-panel">
+          <form class="event-discount-form" action="https://formsubmit.co/info@freesyrians.ca" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="_subject" value="Free Syrians — تسجيل خصم 15% للفعاليات المقبلة">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="نوع التسجيل" value="قائمة خصم 15% للفعاليات القادمة">
+            <input type="hidden" name="تاريخ التسجيل" id="discount-submission-date">
+            <input type="text" name="_honey" class="event-hidden-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="event-form-fields">
+              <div class="event-form-field">
+                <label for="discount-first-name">الاسم الأول</label>
+                <input id="discount-first-name" name="الاسم الأول" autocomplete="given-name" type="text" maxlength="80" placeholder="الاسم الأول">
+              </div>
+              <div class="event-form-field">
+                <label for="discount-last-name">اسم العائلة</label>
+                <input id="discount-last-name" name="اسم العائلة" autocomplete="family-name" type="text" maxlength="80" placeholder="اسم العائلة">
+              </div>
+              <div class="event-form-field">
+                <label for="discount-email">البريد الإلكتروني <span class="event-required">*</span></label>
+                <input id="discount-email" name="email" autocomplete="email" type="email" inputmode="email" maxlength="254" required placeholder="name@example.com" dir="ltr">
+              </div>
+              <div class="event-form-field">
+                <label for="discount-phone">رقم الهاتف</label>
+                <input id="discount-phone" name="رقم الهاتف" autocomplete="tel" type="tel" inputmode="tel" maxlength="35" placeholder="+1 (___) ___-____" dir="ltr">
+              </div>
+              <div class="event-form-field">
+                <label for="discount-date">تاريخ التسجيل (تلقائي)</label>
+                <input id="discount-date" type="text" readonly aria-readonly="true" placeholder="تاريخ اليوم" dir="ltr">
+              </div>
+              <div class="event-form-field event-form-wide">
+                <label for="discount-comments">ملاحظات أو تعليقات (اختياري)</label>
+                <textarea id="discount-comments" name="التعليقات" rows="4" maxlength="1500" placeholder="هل لديك أي اقتراحات لفعالياتنا المقبلة؟"></textarea>
+              </div>
+            </div>
+            <label class="event-form-consent">
+              <input type="checkbox" name="الموافقة على إرسال أخبار وخصومات الفعاليات" value="نعم" required>
+              <span>أوافق على تلقي رسائل بريد إلكتروني من أحرار سوريا عن الفعاليات المقبلة وخصم ١٥٪، وأعلم أنه يمكنني طلب إيقاف هذه الرسائل في أي وقت. <span class="event-required">*</span></span>
+            </label>
+            <p class="event-form-privacy">نستخدم بياناتك للتواصل بشأن الفعاليات والعروض التي وافقت على تلقيها، ولن ننشر معلوماتك على الموقع. يمكن طلب إزالة بياناتك عبر <a href="mailto:info@freesyrians.ca">info@freesyrians.ca</a>.</p>
+            <div class="event-form-footer">
+              <button class="event-button event-form-submit" type="submit">إرسال التسجيل</button>
+              <small>الحقول المميزة بعلامة * إلزامية.</small>
+            </div>
+          </form>
+        </div>
+      </section>
+      <script>
+        (function () {
+          var input = document.getElementById('discount-date');
+          var hidden = document.getElementById('discount-submission-date');
+          var form = document.querySelector('.event-discount-form');
+          function stamp() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = String(date.getMonth() + 1).padStart(2, '0');
+            var day = String(date.getDate()).padStart(2, '0');
+            var hh = String(date.getHours()).padStart(2, '0');
+            var mm = String(date.getMinutes()).padStart(2, '0');
+            var zone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local';
+            var value = year + '-' + month + '-' + day + ' ' + hh + ':' + mm + ' (' + zone + ')';
+            input.value = value;
+            hidden.value = value;
+          }
+          stamp();
+          form.addEventListener('submit', stamp);
+        }());
+      </script>
       <div class="event-buttons"><a class="event-button secondary" href="../">العودة إلى جميع الفعاليات</a></div>
     </div>
   </main>

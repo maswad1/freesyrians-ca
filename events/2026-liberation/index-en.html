@@ -134,7 +134,8 @@
 <p>Sign up for news about future Free Syrians events and a 15% discount. This is not a ticket reservation for December 6.</p></div>
 <div class="event-panel event-discount-panel"><form class="event-discount-form" action="https://formsubmit.co/info@freesyrians.ca" method="POST" accept-charset="UTF-8">
 <input type="hidden" name="_subject" value="Free Syrians — 15% discount registration"><input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true"><input type="hidden" name="_next" value="https://freesyrians.ca/events/2026-liberation/thank-you/index-en.html">
+<input type="hidden" name="_captcha" value="true"><input type="hidden" name="_next" value="https://freesyrians.ca/events/2026-liberation/thank-you/index-en.html?received=1">
+            <input type="hidden" name="_url" value="https://freesyrians.ca/events/2026-liberation/index-en.html">
 <input type="hidden" name="نوع التسجيل" value="قائمة خصم 15% للفعاليات القادمة"><input type="hidden" name="تاريخ التسجيل" id="discount-submission-date">
 <input type="text" name="_honey" class="event-hidden-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
 <div class="event-form-fields">
@@ -150,69 +151,31 @@
 <span class="event-form-status" id="event-form-status" role="status" aria-live="polite" hidden style="font-weight:700;line-height:1.6"></span><small>Fields marked * are required.</small></div></form></div></section>
       <script>
         (function () {
+          var form = document.querySelector('.event-discount-form');
+          if (!form) return;
           var input = document.getElementById('discount-date');
           var hidden = document.getElementById('discount-submission-date');
-          var form = document.querySelector('.event-discount-form');
           var status = document.getElementById('event-form-status');
           var button = form.querySelector('button[type="submit"]');
-          var originalButtonText = button.textContent;
           function stamp() {
-            var date = new Date();
-            var year = date.getFullYear();
-            var month = String(date.getMonth() + 1).padStart(2, '0');
-            var day = String(date.getDate()).padStart(2, '0');
-            var hh = String(date.getHours()).padStart(2, '0');
-            var mm = String(date.getMinutes()).padStart(2, '0');
+            var now = new Date();
+            var pad = function (n) { return String(n).padStart(2, '0'); };
             var zone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local';
-            var value = year + '-' + month + '-' + day + ' ' + hh + ':' + mm + ' (' + zone + ')';
-            input.value = value;
-            hidden.value = value;
-          }
-          function message(text, error) {
-            status.hidden = false;
-            status.textContent = text;
-            status.style.color = error ? '#a51c30' : '#106944';
-          }
-          function restore() {
-            button.disabled = false;
-            button.textContent = originalButtonText;
+            var value = now.getFullYear() + '-' + pad(now.getMonth() + 1) + '-' + pad(now.getDate()) +
+              ' ' + pad(now.getHours()) + ':' + pad(now.getMinutes()) + ' (' + zone + ')';
+            if (input) input.value = value;
+            if (hidden) hidden.value = value;
           }
           stamp();
-          form.addEventListener('submit', async function (event) {
-            event.preventDefault();
-            if (!form.reportValidity()) {
-              message('Please enter a valid email address and agree to receive event updates.', true);
-              return;
-            }
+          form.addEventListener('submit', function () {
             stamp();
-            button.disabled = true;
-            button.textContent = 'Submitting…';
-            message('Sending your registration. Please keep this page open.', false);
-            try {
-              var fields = new FormData(form);
-              var payload = {};
-              fields.forEach(function (value, key) {
-                if (key !== '_honey' && key !== '_next') payload[key] = value;
-              });
-              var response = await fetch('https://formsubmit.co/ajax/info@freesyrians.ca', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-                body: JSON.stringify(payload)
-              });
-              var result = await response.json();
-              var success = result && (result.success === true || result.success === 'true');
-              if (!response.ok || !success) {
-                throw new Error((result && (result.message || result.error)) || 'Unable to submit');
-              }
-              window.location.assign('/events/2026-liberation/thank-you/index-en.html?received=1');
-            } catch (error) {
-              message('We could not confirm your registration. Please try again, or email info@freesyrians.ca.', true);
-              restore();
+            if (status) {
+              status.hidden = false;
+              status.style.color = '#106944';
+              status.textContent = 'Continuing to the registration service. Complete any verification step if prompted; a confirmation page will appear after successful submission.';
             }
+            if (button) button.textContent = 'Continuing…';
           });
-          form.addEventListener('invalid', function () {
-            message('Please enter your email address and consent to updates before submitting.', true);
-          }, true);
         }());
       </script><div class="event-buttons"><a class="event-button secondary" href="../index-en.html">Back to All Events</a></div></div></main>
 <footer class="event-footer"><div class="event-container event-footer-inner"><strong>FREE SYRIANS · أحرار سوريا</strong><a href="../index-en.html">All Events</a></div></footer></body></html>
